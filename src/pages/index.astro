@@ -1,30 +1,208 @@
 ---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const projectTagline = "High-Performance Sailing Biometric Wearable";
+
+const posts = [
+  {
+    title: "WEEK 1",
+    date: "AAAA-MM-DD",
+    excerpt: "Primeiras decisões do projeto.",
+    body: "Resumo curto: setup inicial, requisitos, divisão de tarefas e primeiras decisões (sensores, arquitetura, plano de testes)."
+  },
+  {
+    title: "WEEK 2",
+    date: "AAAA-MM-DD",
+    excerpt: "Escolha de sensores.",
+    body: "Resumo curto: seleção preliminar de sensores biométricos e IMU, critérios (precisão, robustez, consumo), e próximos passos."
+  }
+];
 ---
 
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>ElectroCap</title>
-</head>
+<SiteLayout title={`${projectTagline} — ElectroCap`}>
+  <div class="container hero">
+    <div class="hero-card">
+      <div class="kicker">{projectTagline}</div>
+      <h1>ELECTROCAP</h1>
 
-<body>
-  <h1>ElectroCap — Sailing Wearable</h1>
+      <p class="subtitle">
+        Sistema wearable para atletas de vela que mede esforço físico e performance técnica em tempo real.
+      </p>
 
-  <p>
-    O ElectroCap é um sistema wearable para atletas de vela que permite medir
-    simultaneamente o esforço físico e a performance técnica em tempo real.
-  </p>
+      <div class="cta-row">
+        <a class="btn primary" href="/proposta-electrocap.pdf" target="_blank" rel="noreferrer">PROPOSTA (PDF)</a>
+        <a class="btn" href="/#blog">VER BLOG</a>
+        <a class="btn" href="/#contact">CONTACTO</a>
+      </div>
+    </div>
+  </div>
 
-  <h2>Objetivo</h2>
-  <p>
-    Melhorar o treino e desempenho de velejadores através da análise integrada
-    de dados biométricos e de movimento.
-  </p>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>ABOUT OUR PROJECT</h2>
+        <div class="hint">Visão geral</div>
+      </div>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="/team">Equipa</a></li>
-    <li><a href="/blog">Blog</a></li>
-  </ul>
-</body>
-</html>
+      <div class="grid-2">
+        <div class="card">
+          <h3>PROBLEMA</h3>
+          <p>
+            Treinadores e atletas não têm dados contínuos e integrados sobre stress físico (fadiga, HRV, etc.)
+            e performance técnica (postura, micro-ajustes) durante treino/competição.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>SOLUÇÃO</h3>
+          <p>
+            Wearable com sensores biométricos e IMU (acel/gyro), comunicação sem fios e packaging resistente à água,
+            permitindo análise em tempo real e correlação entre esforço e manobras.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>BENEFICIÁRIOS</h3>
+          <p>Atletas de vela competitiva, treinadores e investigação em ciência do desporto.</p>
+        </div>
+        <div class="card">
+          <h3>AMBIENTE</h3>
+          <p>Barcos pequenos / alta intensidade onde a contribuição física do atleta é crítica.</p>
+        </div>
+        <div class="card">
+          <h3>SUCESSO</h3>
+          <p>Precisão, resposta em tempo real e melhoria mensurável de performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="container">
+      <div class="section-title">
+        <h2>TEAM</h2>
+        <div class="hint">Membros &amp; funções</div>
+      </div>
+
+      <div class="team-grid">
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <b>Membro 1</b>
+            <div class="meta">Função</div>
+          </div>
+        </div>
+
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <b>Membro 2</b>
+            <div class="meta">Função</div>
+          </div>
+        </div>
+
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <b>Membro 3</b>
+            <div class="meta">Função</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO (para o link do menu funcionar) -->
+  <section id="video">
+    <div class="container">
+      <div class="section-title">
+        <h2>VIDEO</h2>
+        <div class="hint">Demo / apresentação</div>
+      </div>
+
+      <div class="card">
+        <p style="margin:0; color: var(--muted);">
+          Placeholder — quando tiverem vídeo, coloquem aqui o embed (YouTube/Drive).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2>BLOG</h2>
+        <div class="hint">Clica num cartão para abrir</div>
+      </div>
+
+      <div class="blog-grid">
+        {posts.map((p) => (
+          <div
+            class="card post"
+            data-post
+            data-title={p.title}
+            data-date={p.date}
+            data-body={p.body}
+            role="button"
+            tabIndex="0"
+          >
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="post-title">{p.title}</div>
+            <div class="post-date">{p.date}</div>
+            <div class="post-excerpt">{p.excerpt}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS (para o link do menu funcionar) -->
+  <section id="partners">
+    <div class="container">
+      <div class="section-title">
+        <h2>PARTNERS</h2>
+        <div class="hint">Placeholders</div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro A
+        </div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro B
+        </div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro C
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>CONTACT</h2>
+        <div class="hint">Email</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>EMAIL</h3>
+          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
+        </div>
+        <div class="card">
+          <h3>LINKS</h3>
+          <p>
+            <a href="/proposta-electrocap.pdf" style="color:var(--accent)" target="_blank" rel="noreferrer">Proposta (PDF)</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
