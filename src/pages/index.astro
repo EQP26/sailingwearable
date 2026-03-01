@@ -4,207 +4,226 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 const projectTagline = "High-Performance Sailing Biometric Wearable";
 
 const posts = [
-  {
-    title: "WEEK 1",
-    date: "AAAA-MM-DD",
-    excerpt: "Primeiras decisões do projeto.",
-    body: "Resumo curto: setup inicial, requisitos, divisão de tarefas e primeiras decisões (sensores, arquitetura, plano de testes)."
-  },
-  {
-    title: "WEEK 2",
-    date: "AAAA-MM-DD",
-    excerpt: "Escolha de sensores.",
-    body: "Resumo curto: seleção preliminar de sensores biométricos e IMU, critérios (precisão, robustez, consumo), e próximos passos."
-  }
+  {
+    title: "WEEK 1",
+    date: "AAAA-MM-DD",
+    excerpt: "Primeiras decisões do projeto.",
+    body: "Resumo curto: setup inicial, requisitos, divisão de tarefas e primeiras decisões (sensores, arquitetura, plano de testes)."
+  },
+  {
+    title: "WEEK 2",
+    date: "AAAA-MM-DD",
+    excerpt: "Escolha de sensores.",
+    body: "Resumo curto: selection preliminar de sensores biométricos e IMU, critérios (precisão, robustez, consumo), e próximos passos."
+  }
 ];
 ---
 
 <SiteLayout title={`${projectTagline} — ElectroCap`}>
-  <div class="container hero">
-    <div class="hero-card">
-      <div class="kicker">{projectTagline}</div>
-      <h1>ELECTROCAP</h1>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <p class="subtitle">
-        Sistema wearable para atletas de vela que mede esforço físico e performance técnica em tempo real.
-      </p>
-
-      <div class="cta-row">
-        <a class="btn primary" href="/proposta-electrocap.pdf" target="_blank" rel="noreferrer">PROPOSTA (PDF)</a>
-        <a class="btn" href="/#blog">VER BLOG</a>
-        <a class="btn" href="/#contact">CONTACTO</a>
-      </div>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="site-logo">ElectroCap</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+          <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
+          <li><a href="#blog"><i class="fas fa-bold"></i> Blog</a></li>
+          <li><a href="#partners"><i class="fas fa-handshake"></i> Partners</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>ABOUT OUR PROJECT</h2>
-        <div class="hint">Visão geral</div>
-      </div>
+  <div class="container hero">
+    <div class="hero-card">
+      <div class="kicker">{projectTagline}</div>
+      <h1>ELECTROCAP</h1>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>PROBLEMA</h3>
-          <p>
-            Treinadores e atletas não têm dados contínuos e integrados sobre stress físico (fadiga, HRV, etc.)
-            e performance técnica (postura, micro-ajustes) durante treino/competição.
-          </p>
-        </div>
+      <p class="subtitle">
+        Sistema wearable para atletas de vela que mede esforço físico e performance técnica em tempo real.
+      </p>
 
-        <div class="card">
-          <h3>SOLUÇÃO</h3>
-          <p>
-            Wearable com sensores biométricos e IMU (acel/gyro), comunicação sem fios e packaging resistente à água,
-            permitindo análise em tempo real e correlação entre esforço e manobras.
-          </p>
-        </div>
-      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="/proposta-electrocap.pdf" target="_blank" rel="noreferrer">PROPOSTA (PDF)</a>
+        <a class="btn" href="/#blog">VER BLOG</a>
+        <a class="btn" href="/#contact">CONTACTO</a>
+      </div>
+    </div>
+  </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>BENEFICIÁRIOS</h3>
-          <p>Atletas de vela competitiva, treinadores e investigação em ciência do desporto.</p>
-        </div>
-        <div class="card">
-          <h3>AMBIENTE</h3>
-          <p>Barcos pequenos / alta intensidade onde a contribuição física do atleta é crítica.</p>
-        </div>
-        <div class="card">
-          <h3>SUCESSO</h3>
-          <p>Precisão, resposta em tempo real e melhoria mensurável de performance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>ABOUT OUR PROJECT</h2>
+        <div class="hint">Visão geral</div>
+      </div>
 
-  <!-- TEAM -->
-  <section id="team">
-    <div class="container">
-      <div class="section-title">
-        <h2>TEAM</h2>
-        <div class="hint">Membros &amp; funções</div>
-      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>PROBLEMA</h3>
+          <p>
+            Treinadores e atletas não têm dados contínuos e integrados sobre stress físico (fadiga, HRV, etc.)
+            e performance técnica (postura, micro-ajustes) durante treino/competição.
+          </p>
+        </div>
 
-      <div class="team-grid">
-        <div class="card person">
-          <div class="avatar" aria-hidden="true"></div>
-          <div>
-            <b>Membro 1</b>
-            <div class="meta">Função</div>
-          </div>
-        </div>
+        <div class="card">
+          <h3>SOLUÇÃO</h3>
+          <p>
+            Wearable com sensores biométricos e IMU (acel/gyro), comunicação sem fios e packaging resistente à água,
+            permitindo análise em tempo real e correlação entre esforço e manobras.
+          </p>
+        </div>
+      </div>
 
-        <div class="card person">
-          <div class="avatar" aria-hidden="true"></div>
-          <div>
-            <b>Membro 2</b>
-            <div class="meta">Função</div>
-          </div>
-        </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>BENEFICIÁRIOS</h3>
+          <p>Atletas de vela competitiva, treinadores e investigação em ciência do desporto.</p>
+        </div>
+        <div class="card">
+          <h3>AMBIENTE</h3>
+          <p>Barcos pequenos / alta intensidade onde a contribuição física do atleta é crítica.</p>
+        </div>
+        <div class="card">
+          <h3>SUCESSO</h3>
+          <p>Precisão, resposta em tempo real e melhoria mensurável de performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="card person">
-          <div class="avatar" aria-hidden="true"></div>
-          <div>
-            <b>Membro 3</b>
-            <div class="meta">Função</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="team">
+    <div class="container">
+      <div class="section-title">
+        <h2>TEAM</h2>
+        <div class="hint">Membros &amp; funções</div>
+      </div>
 
-  <!-- VIDEO (para o link do menu funcionar) -->
-  <section id="video">
-    <div class="container">
-      <div class="section-title">
-        <h2>VIDEO</h2>
-        <div class="hint">Demo / apresentação</div>
-      </div>
+      <div class="team-grid">
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <b>Membro 1</b>
+            <div class="meta">Função</div>
+          </div>
+        </div>
 
-      <div class="card">
-        <p style="margin:0; color: var(--muted);">
-          Placeholder — quando tiverem vídeo, coloquem aqui o embed (YouTube/Drive).
-        </p>
-      </div>
-    </div>
-  </section>
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <b>Membro 2</b>
+            <div class="meta">Função</div>
+          </div>
+        </div>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <div class="container">
-      <div class="section-title">
-        <h2>BLOG</h2>
-        <div class="hint">Clica num cartão para abrir</div>
-      </div>
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <b>Membro 3</b>
+            <div class="meta">Função</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="blog-grid">
-        {posts.map((p) => (
-          <div
-            class="card post"
-            data-post
-            data-title={p.title}
-            data-date={p.date}
-            data-body={p.body}
-            role="button"
-            tabIndex="0"
-          >
-            <div class="thumb" aria-hidden="true"></div>
-            <div class="post-title">{p.title}</div>
-            <div class="post-date">{p.date}</div>
-            <div class="post-excerpt">{p.excerpt}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+    <section id="video">
+    <div class="container">
+      <div class="section-title">
+        <h2>VIDEO</h2>
+        <div class="hint">Demo / apresentação</div>
+      </div>
 
-  <!-- PARTNERS (para o link do menu funcionar) -->
-  <section id="partners">
-    <div class="container">
-      <div class="section-title">
-        <h2>PARTNERS</h2>
-        <div class="hint">Placeholders</div>
-      </div>
+      <div class="card">
+        <p style="margin:0; color: var(--muted);">
+          Placeholder — quando tiverem vídeo, coloquem aqui o embed (YouTube/Drive).
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid-3">
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Parceiro A
-        </div>
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Parceiro B
-        </div>
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Parceiro C
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2>BLOG</h2>
+        <div class="hint">Clica num cartão para abrir</div>
+      </div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>CONTACT</h2>
-        <div class="hint">Email</div>
-      </div>
+      <div class="blog-grid">
+        {posts.map((p) => (
+          <div
+            class="card post"
+            data-post
+            data-title={p.title}
+            data-date={p.date}
+            data-body={p.body}
+            role="button"
+            tabIndex="0"
+          >
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="post-title">{p.title}</div>
+            <div class="post-date">{p.date}</div>
+            <div class="post-excerpt">{p.excerpt}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>EMAIL</h3>
-          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
-        </div>
-        <div class="card">
-          <h3>LINKS</h3>
-          <p>
-            <a href="/proposta-electrocap.pdf" style="color:var(--accent)" target="_blank" rel="noreferrer">Proposta (PDF)</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="partners">
+    <div class="container">
+      <div class="section-title">
+        <h2>PARTNERS</h2>
+        <div class="hint">Placeholders</div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro A
+        </div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro B
+  000 000   Parceiro C
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>CONTACT</h2>
+        <div class="hint">Email</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>EMAIL</h3>
+          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
+        </div>
+        <div class="card">
+          <h3>LINKS</h3>
+          <p>
+            <a href="/proposta-electrocap.pdf" style="color:var(--accent)" target="_blank" rel="noreferrer">Proposta (PDF)</a>
+          </p>
+        </div>
+        <div class="card">
+        Parceiro A
+        </div>
+        <div class="card">
+        Parceiro B
+        </div>
+        <div class="card">
+        Parceiro C
+        </div>
+      </div>
+    </div>
+  </section>
 </SiteLayout>
 <style is:global>
   /* Cores Principais do ElectroCap */
@@ -214,6 +233,7 @@ const posts = [
     --accent: #0f2c59; /* Azul Escuro Náutico */
     --muted: #7f8c8d;
     --card-bg: #ffffff;
+    --header-bg: #ffffff;
   }
 
   body {
@@ -233,13 +253,82 @@ const posts = [
   }
 
   section {
-    padding: 40px 0;
+    padding: 60px 0 40px 0; /* Mais espaço no topo para o menu fixo */
     border-bottom: 1px solid #e1e8ed;
   }
 
   h1, h2, h3 { color: var(--accent); }
 
+  /* --- NOVO HEADER COM MENU --- */
+  .site-header {
+    background-color: var(--header-bg);
+    color: var(--accent);
+    padding: 15px 0;
+    position: sticky; /* Fica fixo no topo ao fazer scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Logo à esquerda, menu à direita */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Logo */
+  .site-logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Menu */
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* Espaço entre os itens */
+  }
+
+  .main-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    transition: color 0.3s;
+    /* Fazendo override aos estilos gerais de 'a' */
+    background-color: transparent !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .main-nav a:hover {
+    color: #135b9c; /* Azul um pouco mais claro */
+  }
+
+  /* Ajuste dos Ícones */
+  .main-nav i {
+    font-size: 1.1em;
+    width: 1.2em; /* Garante que todos os ícones ocupam o mesmo espaço */
+    text-align: center;
+  }
+
   /* --- CABEÇALHO PRINCIPAL (HERO) --- */
+  .hero {
+    padding-top: 80px; /* Mais espaço para o menu */
+  }
   .hero-card {
     background: linear-gradient(135deg, #0f2c59 0%, #1a4989 100%);
     color: white;
@@ -247,7 +336,6 @@ const posts = [
     border-radius: 16px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(15, 44, 89, 0.2);
-    margin-top: 20px;
   }
   .hero-card h1 {
     color: white;
@@ -267,7 +355,7 @@ const posts = [
     color: #a8c6fa;
   }
 
-  /* --- BOTÕES --- */
+  /* --- BOTÕES GERAIS --- */
   .cta-row {
     display: flex;
     justify-content: center;
@@ -276,17 +364,18 @@ const posts = [
   }
   .btn {
     background-color: rgba(255,255,255,0.15);
-    color: white;
+    color: white !important; /* Forçando a cor */
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s;
+    display: inline-block;
   }
   .btn:hover { background-color: rgba(255,255,255,0.3); }
   .btn.primary {
     background-color: white;
-    color: var(--accent);
+    color: var(--accent) !important;
   }
   .btn.primary:hover { background-color: #f0f0f0; }
 
