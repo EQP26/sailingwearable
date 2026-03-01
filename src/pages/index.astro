@@ -197,15 +197,25 @@ const posts = [
     </div>
   </section>
 
-  <section id="partners">
+ <section id="partners">
     <div class="container">
       <div class="section-title">
         <h2>PARTNERS</h2>
+        <div class="hint">Institutional Support</div>
       </div>
-      <div class="grid-3">
-        <div class="card partner-slot">Partner A</div>
-        <div class="card partner-slot">Partner B</div>
-        <div class="card partner-slot">Partner C</div>
+      
+      <div class="card partner-detail-card">
+        <div class="partner-logo-side">
+          <img src="/sailingwearable/ist-logo.png" alt="Instituto Superior Técnico">
+        </div>
+        <div class="partner-description-side">
+          <h3>INSTITUTO SUPERIOR TÉCNICO</h3>
+          <p>
+            Portugal’s leading engineering school, renowned for its cutting-edge research and innovation in science and technology. 
+            IST provides a robust academic environment, equipping students with the knowledge and expertise to tackle 
+            real-world challenges in various engineering disciplines.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -508,6 +518,20 @@ const posts = [
     .hero-card h1 { font-size: 2.8em; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
   }
+.partner-detail-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    border-top: 8px solid var(--accent);
+    background: white;
+    border-radius: 18px;
+  }
+  .partner-logo-side { flex-shrink: 0; width: 180px; }
+  .partner-logo-side img { width: 100%; height: auto; filter: grayscale(100%); transition: 0.4s; }
+  .partner-detail-card:hover .partner-logo-side img { filter: grayscale(0%); }
+  .partner-description-side h3 { margin: 0 0 15px; color: var(--accent-dark); }
+  .partner-description-side p { margin: 0; color: var(--muted); text-align: justify; }
 </style>
 
 <script is:inline>
