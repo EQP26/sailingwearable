@@ -250,8 +250,8 @@ const posts = [
   :root {
     --bg-color: #f4f7f6;
     --text-color: #333333;
-    --accent: #0f2c59; /* Azul Escuro Náutico */
-    --muted: #7f8c8d;
+    --accent: #054a91; /* Azul Engenharia (mais elétrico e moderno) */
+    --muted: #6c7a89;
     --card-bg: #ffffff;
     --header-bg: #ffffff;
   }
@@ -265,7 +265,6 @@ const posts = [
     padding: 0;
   }
 
-  /* Centrar e limitar o tamanho da página */
   .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -273,7 +272,7 @@ const posts = [
   }
 
   section {
-    padding: 60px 0 40px 0; /* Mais espaço no topo para o menu fixo */
+    padding: 60px 0 40px 0;
     border-bottom: 1px solid #e1e8ed;
   }
 
@@ -299,17 +298,15 @@ const posts = [
     padding: 0 20px;
   }
 
-  /* Logo */
   .site-logo {
     font-size: 1.6em;
-    font-weight: bold;
+    font-weight: 800;
     text-decoration: none;
     color: var(--accent);
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
   }
 
-  /* Menu */
   .main-nav ul {
     list-style: none;
     margin: 0;
@@ -330,201 +327,134 @@ const posts = [
     background-color: transparent !important;
     padding: 5px !important;
     margin: 0 !important;
-    border-radius: 0 !important;
   }
 
-  .main-nav a:hover {
-    color: #135b9c;
-  }
-
-  .main-nav i {
-    font-size: 1.1em;
-    width: 1.2em;
-    text-align: center;
-  }
+  .main-nav a:hover { color: #3e7cb1; }
+  .main-nav i { font-size: 1.1em; width: 1.2em; text-align: center; }
 
   /* --- CABEÇALHO PRINCIPAL (HERO) --- */
-  .hero {
-    padding-top: 80px;
-  }
+  .hero { padding-top: 80px; }
   .hero-card {
-    background: linear-gradient(135deg, #0f2c59 0%, #1a4989 100%);
+    background: linear-gradient(135deg, #054a91 0%, #172a3a 100%); /* Gradiente mais sério */
     color: white;
     padding: 60px 40px;
-    border-radius: 16px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(15, 44, 89, 0.2);
+    box-shadow: 0 10px 30px rgba(5, 74, 145, 0.2);
   }
-  .hero-card h1 {
-    color: white;
-    font-size: 3.5em;
-    margin: 10px 0;
-    letter-spacing: 3px;
-  }
-  .hero-card .subtitle {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    opacity: 0.9;
-  }
-  .hero-card .kicker {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9em;
-    color: #a8c6fa;
-  }
+  .hero-card h1 { color: white; font-size: 3.5em; margin: 10px 0; letter-spacing: 4px; }
+  .hero-card .subtitle { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
+  .hero-card .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: #81a4cd; font-weight: bold; }
 
   /* --- BOTÕES GERAIS --- */
-  .cta-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+  .cta-row { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
   .btn {
     background-color: rgba(255,255,255,0.15);
     color: white !important;
     text-decoration: none;
     padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 6px; /* Mais quadrado */
+    font-weight: 600;
     transition: 0.3s;
     display: inline-block;
   }
   .btn:hover { background-color: rgba(255,255,255,0.3); }
-  .btn.primary {
-    background-color: white;
-    color: var(--accent) !important;
-  }
+  .btn.primary { background-color: white; color: var(--accent) !important; }
   .btn.primary:hover { background-color: #f0f0f0; }
 
   /* --- TÍTULOS DAS SECÇÕES --- */
-  .section-title {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .section-title h2 {
-    margin-bottom: 5px;
-    font-size: 2.2em;
-  }
-  .section-title .hint {
-    color: var(--accent);
-    text-transform: uppercase;
-    font-size: 0.85em;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
+  .section-title { text-align: center; margin-bottom: 40px; }
+  .section-title h2 { margin-bottom: 5px; font-size: 2.2em; font-weight: 800; }
+  .section-title .hint { color: var(--accent); text-transform: uppercase; font-size: 0.85em; font-weight: bold; letter-spacing: 1px; }
 
-  /* --- CARTÕES GERAIS --- */
+  /* --- CARTÕES GERAIS (Identidade nova com fio no topo) --- */
   .card {
     background: var(--card-bg);
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 8px;
+    border-top: 4px solid transparent;
     box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, border-top 0.2s;
   }
   .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--accent); /* Fio azul técnico */
   }
-  .card h3 { margin-top: 0; }
+  .card h3 { margin-top: 0; font-weight: 700; }
 
-  /* --- GRELHAS GERAIS --- */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
-    margin-bottom: 25px;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-  }
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-  }
+  /* --- GRELHAS --- */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 25px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
 
-  /* --- ESTILO NOVO DA EQUIPA (LADO A LADO) --- */
+  /* --- EQUIPA (IDENTIDADE DIFERENCIADA) --- */
   .team-grid-new {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 20px;
+    gap: 24px;
   }
   .person-card {
     display: flex;
     gap: 20px;
     align-items: center;
     text-align: left;
-    padding: 20px;
+    padding: 24px;
   }
   .person-img {
-    width: 100px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     background-color: #e0e6ed;
-    border-radius: 8px; /* Cantos arredondados */
+    border-radius: 50%; /* Agora é um círculo perfeito */
+    border: 3px solid #f4f7f6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
   }
   .person-info h3 {
     margin: 0 0 5px 0;
-    font-size: 1.1em;
-    color: var(--text-color);
+    font-size: 1.15em;
+    color: var(--accent); /* Azul em vez de preto */
+    font-weight: 800;
     text-transform: uppercase;
-    border-bottom: none;
-    padding-bottom: 0;
   }
   .person-info .course-id {
-    color: #4b633d; /* Verde escuro igual ao do outro grupo */
-    font-weight: 600;
+    color: #172a3a; /* Cinza técnico escuro */
+    font-weight: 700;
     font-size: 0.85em;
     margin-bottom: 5px;
   }
   .person-info .major {
     font-size: 0.85em;
     color: var(--muted);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     line-height: 1.3;
   }
-  .person-links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+  .person-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  
   .btn-small {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 6px 14px;
     font-size: 0.8em;
+    font-weight: 600;
     color: var(--text-color) !important;
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Formato de "comprimido" */
+    border: 1px solid #d1d8e0;
+    border-radius: 4px; /* Botões mais sérios e quadrados */
     text-decoration: none;
     transition: all 0.2s;
     background: transparent;
   }
-  .btn-small:hover {
-    background-color: #f4f7f6;
-    border-color: #999;
-  }
+  .btn-small:hover { background-color: var(--accent); color: white !important; border-color: var(--accent); }
 
   /* --- FOTOS DO BLOG --- */
-  .thumb {
-    background-color: #e0e6ed;
-    height: 160px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  /* Textos do Blog */
-  .post-title { font-weight: bold; font-size: 1.3em; color: var(--accent); }
-  .post-date { font-size: 0.85em; color: var(--muted); margin-bottom: 10px; }
+  .thumb { background-color: #e0e6ed; height: 160px; border-radius: 6px; margin-bottom: 15px; }
+  .post-title { font-weight: 800; font-size: 1.2em; color: var(--accent); }
+  .post-date { font-size: 0.85em; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
   .post-excerpt { color: var(--text-color); font-size: 0.95em; }
 
-  /* Scroll suave */
   html { scroll-behavior: smooth; }
 </style>
 </SiteLayout>
