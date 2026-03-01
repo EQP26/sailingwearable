@@ -3,19 +3,18 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 
 const projectTagline = "High-Performance Sailing Biometric Wearable";
 
-// BLOG POSTS
 const posts = [
   {
     title: "WEEK 1",
     date: "2026-03-01",
     excerpt: "Project Kick-off and Initial Technical Decisions.",
-    body: "In our first week, we established the project roadmap, defined core requirements for marine environments, and distributed tasks among the team. We selected the initial sensor array focusing on heart rate and motion tracking."
+    body: "In our first week, we established the project roadmap, defined core requirements for marine environments, and distributed tasks among the team."
   },
   {
     title: "WEEK 2",
     date: "2026-03-08",
     excerpt: "Sensor Selection and Hardware Architecture.",
-    body: "This week was dedicated to benchmarking sensors. We evaluated different IMUs for wave-motion compensation and biometric sensors that can operate reliably under salt-water conditions. Architecture is now 80% defined."
+    body: "Benchmarking sensors: evaluating IMUs for wave-motion compensation and biometric sensors for salt-water reliability."
   }
 ];
 ---
@@ -28,69 +27,45 @@ const posts = [
       <a href="#top" class="site-logo">Knotix</a>
       <nav class="main-nav">
         <ul>
-          <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-          <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
-          <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
-          <li><a href="#blog"><i class="fas fa-bold"></i> Blog</a></li>
-          <li><a href="#partners"><i class="fas fa-handshake"></i> Partners</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div id="top" class="container hero">
-    <div class="hero-card">
-      <div class="kicker">AN ELECTROCAP PROJECT</div>
-      <h1>KNOTIX</h1>
-      <p class="subtitle">
-        A cutting-edge wearable system for sailing athletes designed to synchronize biometric effort with technical performance in real-time.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="/sailingwearable/proposta-electrocap.pdf" target="_blank" rel="noreferrer">
-          <i class="fas fa-file-pdf"></i> PROPOSAL (PDF)
-        </a>
-        <a class="btn" href="#blog">VIEW UPDATES</a>
+  <section id="top" class="hero-minimal">
+    <div class="container">
+      <div class="hero-content">
+        <div class="kicker">An ElectroCap Project</div>
+        <h1>KNOTIX</h1>
+        <p>A cutting-edge wearable system for sailing athletes designed to synchronize biometric effort with technical performance in real-time.</p>
+        <div class="cta-simple">
+          <a class="btn-ghost" href="#blog">View Updates</a>
+          <a class="btn-ghost" href="#about">Learn More</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <section id="about">
     <div class="container">
       <div class="section-title">
-        <h2>ABOUT OUR PROJECT</h2>
+        <h2>About our Project</h2>
         <div class="hint">Technical Overview</div>
       </div>
 
       <div class="grid-2">
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-exclamation-circle"></i></div>
-          <h3>THE PROBLEM</h3>
-          <p>Competitive sailing lacks integrated, real-time feedback systems. Athletes and coaches cannot currently correlate physical fatigue (HRV/Stress) with specific technical maneuvers on the water.</p>
+        <div class="card-tech">
+          <h3>The Problem</h3>
+          <p>Competitive sailing lacks integrated, real-time feedback systems. Athletes cannot correlate physical fatigue with specific technical maneuvers.</p>
         </div>
-
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>OUR SOLUTION</h3>
-          <p>Knotix bridges this gap with a rugged, water-resistant wearable. By combining high-precision IMU data with biometric sensors, we provide a holistic view of performance under pressure.</p>
-        </div>
-      </div>
-
-      <div class="grid-3" style="margin-top: 30px;">
-        <div class="card tech-feature">
-          <i class="fas fa-crosshairs"></i>
-          <h3>TARGET USERS</h3>
-          <p>Professional athletes and high-performance sailing academies.</p>
-        </div>
-        <div class="card tech-feature">
-          <i class="fas fa-water"></i>
-          <h3>ENVIRONMENT</h3>
-          <p>Built for the harsh conditions of small-boat (Dinghy) racing.</p>
-        </div>
-        <div class="card tech-feature">
-          <i class="fas fa-chart-line"></i>
-          <h3>SUCCESS</h3>
-          <p>Data-driven coaching and measurable gain in boat handling.</p>
+        <div class="card-tech">
+          <h3>Our Solution</h3>
+          <p>Knotix bridges this gap with a rugged, water-resistant wearable combining high-precision IMU data with biometric sensors.</p>
         </div>
       </div>
     </div>
@@ -99,8 +74,8 @@ const posts = [
   <section id="team">
     <div class="container">
       <div class="section-title">
-        <h2>MEET THE TEAM</h2>
-        </div>
+        <h2>Meet the Team</h2>
+      </div>
 
       <div class="team-grid-new">
         <div class="card person-card">
@@ -110,7 +85,7 @@ const posts = [
             <div class="course-id">LEE IST-ID 110584</div>
             <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
-              <a href="mailto:diogo.candeias@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="mailto:diogo.candeias@tecnico.ulisboa.pt" class="btn-small">Email</a>
             </div>
           </div>
         </div>
@@ -122,8 +97,8 @@ const posts = [
             <div class="course-id">LEE IST-ID 110218</div>
             <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
-              <a href="mailto:miguel.duarte@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" target="_blank" class="btn-small linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:miguel.duarte@tecnico.ulisboa.pt" class="btn-small">Email</a>
+              <a href="#" target="_blank" class="btn-small"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -135,7 +110,7 @@ const posts = [
             <div class="course-id">LEEC IST-ID 109566</div>
             <div class="major">3rd Year Electrical and Computer Engineering</div>
             <div class="person-links">
-              <a href="mailto:hugo.chen@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="mailto:hugo.chen@tecnico.ulisboa.pt" class="btn-small">Email</a>
             </div>
           </div>
         </div>
@@ -147,8 +122,8 @@ const posts = [
             <div class="course-id">LEE IST-ID 111160</div>
             <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
-              <a href="mailto:goncalo.lopes@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" target="_blank" class="btn-small linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:goncalo.lopes@tecnico.ulisboa.pt" class="btn-small">Email</a>
+              <a href="#" target="_blank" class="btn-small"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -156,23 +131,12 @@ const posts = [
     </div>
   </section>
 
-  <section id="video">
-    <div class="container">
-      <div class="section-title"><h2>PROJECT VIDEO</h2><div class="hint">Demonstration</div></div>
-      <div class="card video-placeholder">
-        <i class="fas fa-play-circle"></i>
-        <p>Your YouTube / Drive video will be embedded here.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="blog">
     <div class="container">
-      <div class="section-title"><h2>KNOTIX BLOG</h2><div class="hint">Weekly Progress</div></div>
+      <div class="section-title"><h2>Blog</h2><div class="hint">Weekly Progress</div></div>
       <div class="blog-grid">
         {posts.map((p) => (
           <div class="card post" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
-            <div class="thumb"></div>
             <div class="post-title">{p.title}</div>
             <div class="post-date">{p.date}</div>
             <div class="post-excerpt">{p.excerpt}</div>
@@ -184,118 +148,122 @@ const posts = [
 
   <section id="partners">
     <div class="container">
-      <div class="section-title"><h2>PARTNERS & SUPPORT</h2></div>
+      <div class="section-title"><h2>Partners</h2></div>
       <div class="grid-3">
-        <div class="card partner-card">Partner A</div>
-        <div class="card partner-card">Partner B</div>
-        <div class="card partner-card">Partner C</div>
+        <div class="partner-box">Partner A</div>
+        <div class="partner-box">Partner B</div>
+        <div class="partner-box">Partner C</div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <footer class="main-footer">
     <div class="container">
-      <div class="section-title"><h2>CONTACT US</h2><div class="hint">Reach out</div></div>
-      <div class="grid-2">
-        <div class="card">
-          <h3>OFFICIAL EMAIL</h3>
-          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Knotix</span>
+          <p>High-performance biometric monitoring for elite sailing.</p>
         </div>
-        <div class="card">
-          <h3>PROJECT ASSETS</h3>
-          <a href="/sailingwearable/proposta-electrocap.pdf" target="_blank" class="proposal-link">
-            <i class="fas fa-file-pdf"></i> Download Project Proposal
-          </a>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">Project</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact" id="contact">
+          <h4>Contact</h4>
+          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Knotix. An ElectroCap Project.</p>
+      </div>
     </div>
-  </section>
+  </footer>
 
-  <a href="#top" id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+  <a href="#top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
 
 <style is:global>
   :root {
-    --bg-color: #f8fafb;
-    --text-color: #2d3436;
+    --bg-color: #ffffff;
+    --text-color: #1d1d1f;
     --accent: #054a91;
-    --accent-dark: #172a3a;
-    --muted: #636e72;
-    --card-bg: #ffffff;
-    --header-h: 70px;
+    --muted: #86868b;
+    --footer-bg: #111111;
   }
 
   * { box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; line-height: 1.7; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; }
   html { scroll-behavior: smooth; }
-  .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
-  section { padding: 90px 0 70px; border-bottom: 1px solid #dfe6e9; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 80px 0; }
 
   /* HEADER */
-  .site-header { background: #ffffff; padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.08); height: var(--header-h); display: flex; align-items: center; }
-  .header-container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 25px; }
-  .site-logo { font-size: 1.7em; font-weight: 900; text-decoration: none; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
-  .main-nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-  .main-nav a { text-decoration: none; color: var(--accent); font-weight: 700; font-size: 0.85em; text-transform: uppercase; transition: 0.2s; }
-  .main-nav a:hover { color: var(--accent-dark); transform: translateY(-1px); }
+  .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid #f2f2f2; }
+  .header-container { height: 60px; display: flex; justify-content: space-between; align-items: center; }
+  .site-logo { font-weight: 800; text-decoration: none; color: var(--accent); font-size: 1.2em; letter-spacing: 1px; }
+  .main-nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+  .main-nav a { text-decoration: none; color: var(--text-color); font-size: 0.9em; font-weight: 500; }
 
-  /* HERO */
-  .hero-card { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color: white; padding: 100px 50px; border-radius: 20px; text-align: center; box-shadow: 0 20px 40px rgba(5, 74, 145, 0.25); }
-  .hero-card h1 { font-size: 4.5em; margin: 15px 0; color: white; letter-spacing: 5px; font-weight: 900; }
-  .hero-card .subtitle { font-size: 1.3em; opacity: 0.95; margin-bottom: 45px; max-width: 750px; margin-left: auto; margin-right: auto; }
-  .kicker { font-weight: 800; letter-spacing: 4px; color: #81a4cd; font-size: 0.9em; }
-  .cta-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-  .btn { padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; }
-  .btn.primary { background: white; color: var(--accent); }
-  .btn:not(.primary) { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.3); }
+  /* NOVO HERO MINIMALISTA */
+  .hero-minimal { padding: 120px 0 80px; text-align: center; background: radial-gradient(circle at top, #f0f4f8 0%, #ffffff 100%); }
+  .hero-content h1 { font-size: 5em; font-weight: 900; margin: 10px 0; letter-spacing: -2px; color: var(--accent); }
+  .kicker { font-weight: 700; color: var(--muted); text-transform: uppercase; font-size: 0.8em; letter-spacing: 2px; }
+  .hero-minimal p { font-size: 1.4em; color: var(--muted); max-width: 600px; margin: 20px auto 40px; line-height: 1.4; }
+  .cta-simple { display: flex; justify-content: center; gap: 20px; }
+  .btn-ghost { padding: 12px 24px; border: 1.5px solid var(--accent); color: var(--accent); text-decoration: none; border-radius: 30px; font-weight: 600; transition: 0.3s; }
+  .btn-ghost:hover { background: var(--accent); color: white; }
 
-  /* CARDS */
-  .card { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border-top: 5px solid transparent; }
-  .card:hover { transform: translateY(-8px); border-top-color: var(--accent); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-  .card h3 { margin: 0 0 15px; color: var(--accent-dark); font-size: 1.2em; font-weight: 800; }
-  .card-icon { font-size: 1.8em; color: var(--accent); margin-bottom: 15px; }
-  .grid-2, .grid-3 { display: grid; gap: 30px; margin-top: 20px; }
-  .grid-2 { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
-  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  /* ABOUT & CARDS */
+  .section-title { margin-bottom: 40px; text-align: center; }
+  .section-title h2 { font-size: 2.5em; font-weight: 800; margin: 0; }
+  .hint { color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.7em; letter-spacing: 1.5px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .card-tech { padding: 30px; background: #fbfbfd; border-radius: 18px; }
+  .card-tech h3 { margin-top: 0; color: var(--accent); }
 
-  /* TEAM CIRCULAR DESIGN */
-  .team-grid-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
-  .person-card { display: flex; align-items: center; gap: 25px; padding: 30px; }
-  .person-img { width: 110px; height: 110px; border-radius: 50%; background-size: cover; background-position: center; flex-shrink: 0; border: 4px solid #f1f2f6; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-  .person-info h3 { margin: 0 0 5px; font-size: 1.25em; font-weight: 900; }
-  .course-id { font-weight: 900; font-size: 0.9em; color: var(--accent-dark); margin-bottom: 2px; }
-  .major { font-size: 0.85em; color: var(--muted); margin-bottom: 15px; line-height: 1.4; }
-  .person-links { display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn-small { text-decoration: none; font-size: 0.8em; padding: 7px 18px; border: 1.5px solid #d1d8e0; border-radius: 6px; color: var(--text-color); font-weight: 700; transition: 0.3s; display: inline-flex; align-items: center; gap: 6px; }
-  .btn-small:hover { background: var(--accent); color: white; border-color: var(--accent); }
-  .linkedin-btn:hover { background: #0077b5; border-color: #0077b5; } 
+  /* TEAM */
+  .team-grid-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .person-card { text-align: center; padding: 20px; }
+  .person-img { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 15px; background-size: cover; border: 4px solid #f2f2f2; }
+  .person-info h3 { font-size: 1.1em; margin: 0; font-weight: 800; }
+  .course-id { font-size: 0.75em; font-weight: 700; color: var(--muted); }
+  .major { font-size: 0.75em; color: var(--muted); margin: 8px 0 15px; }
+  .person-links { display: flex; justify-content: center; gap: 10px; }
+  .btn-small { text-decoration: none; color: var(--text-color); border: 1px solid #ddd; padding: 4px 12px; border-radius: 6px; font-size: 0.8em; font-weight: 600; }
+
+  /* FOOTER PROFISSIONAL */
+  .main-footer { background: var(--footer-bg); color: white; padding: 60px 0 30px; margin-top: 60px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-logo { font-size: 1.5em; font-weight: 900; color: var(--accent); display: block; margin-bottom: 10px; }
+  .footer-brand p { color: #888; font-size: 0.9em; }
+  .footer-nav h4, .footer-contact h4 { font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; color: #fff; }
+  .footer-nav ul { list-style: none; padding: 0; }
+  .footer-nav a { color: #888; text-decoration: none; font-size: 0.9em; line-height: 2.5; }
+  .footer-contact p { color: #888; font-size: 0.9em; }
+  .footer-socials { margin-top: 15px; display: flex; gap: 15px; }
+  .footer-socials a { color: #fff; font-size: 1.2em; }
+  .footer-bottom { border-top: 1px solid #222; padding-top: 20px; text-align: center; color: #555; font-size: 0.8em; }
 
   /* BACK TO TOP */
-  #backToTop { position: fixed; bottom: 40px; right: 40px; background: var(--accent); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 10px 25px rgba(5, 74, 145, 0.3); opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; font-size: 1.2em; }
-  #backToTop.show { opacity: 1; visibility: visible; }
-  #backToTop:hover { transform: translateY(-8px); background: var(--accent-dark); }
+  #backToTop { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; opacity: 0; transition: 0.3s; z-index: 1000; }
+  #backToTop.show { opacity: 1; }
 
-  /* OUTROS */
-  .tech-feature { text-align: center; }
-  .tech-feature i { font-size: 3em; color: var(--accent); margin-bottom: 25px; display: block; }
-  .video-placeholder { text-align: center; padding: 60px; color: var(--muted); border: 2px dashed #d1d8e0; background: #f8fafb; }
-  .video-placeholder i { font-size: 4em; color: var(--accent); opacity: 0.6; margin-bottom: 20px; display: block; }
-  .partner-card { height: 120px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: 800; letter-spacing: 3px; border: 2px solid #f1f2f6; }
-  .proposal-link { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; font-weight: 800; font-size: 1.1em; transition: 0.3s; }
-  .proposal-link:hover { transform: translateX(5px); }
-  .thumb { background: #dfe6e9; height: 170px; border-radius: 8px; margin-bottom: 20px; }
-  .section-title { text-align: center; margin-bottom: 60px; }
-
-  @media (max-width: 900px) {
-    .hero-card h1 { font-size: 3em; }
-    .header-container { flex-direction: column; height: auto; padding: 20px; gap: 15px; }
-    .site-header { height: auto; }
-  }
+  .partner-box { background: #f9f9f9; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #ccc; font-weight: 700; border: 1px solid #eee; }
+  .post-title { font-weight: 800; font-size: 1.1em; }
+  .post-date { font-size: 0.8em; color: var(--accent); font-weight: 700; }
 </style>
 
 <script is:inline>
   window.onscroll = function() {
     const btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       btn.classList.add("show");
     } else {
       btn.classList.remove("show");
