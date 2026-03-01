@@ -4,18 +4,18 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 const projectTagline = "High-Performance Sailing Biometric Wearable";
 
 const posts = [
-  {
-    title: "WEEK 1",
-    date: "AAAA-MM-DD",
-    excerpt: "Primeiras decisões do projeto.",
-    body: "Resumo curto: setup inicial, requisitos, divisão de tarefas e primeiras decisões (sensores, arquitetura, plano de testes)."
-  },
-  {
-    title: "WEEK 2",
-    date: "AAAA-MM-DD",
-    excerpt: "Escolha de sensores.",
-    body: "Resumo curto: selection preliminar de sensores biométricos e IMU, critérios (precisão, robustez, consumo), e próximos passos."
-  }
+  {
+    title: "WEEK 1",
+    date: "2026-03-01",
+    excerpt: "Primeiras decisões do projeto.",
+    body: "Resumo curto: setup inicial, requisitos, divisão de tarefas e primeiras decisões (sensores, arquitetura, plano de testes)."
+  },
+  {
+    title: "WEEK 2",
+    date: "2026-03-08",
+    excerpt: "Escolha de sensores.",
+    body: "Resumo curto: seleção preliminar de sensores biométricos e IMU, critérios (precisão, robustez, consumo), e próximos passos."
+  }
 ];
 ---
 
@@ -38,193 +38,213 @@ const posts = [
     </div>
   </header>
 
-  <div class="container hero">
-    <div class="hero-card">
-      <div class="kicker">{projectTagline}</div>
-      <h1>ELECTROCAP</h1>
+  <div class="container hero">
+    <div class="hero-card">
+      <div class="kicker">{projectTagline}</div>
+      <h1>ELECTROCAP</h1>
 
-      <p class="subtitle">
-        Sistema wearable para atletas de vela que mede esforço físico e performance técnica em tempo real.
-      </p>
+      <p class="subtitle">
+        Sistema wearable para atletas de vela que mede esforço físico e performance técnica em tempo real.
+      </p>
 
-      <div class="cta-row">
-        <a class="btn primary" href="/proposta-electrocap.pdf" target="_blank" rel="noreferrer">PROPOSTA (PDF)</a>
-        <a class="btn" href="/#blog">VER BLOG</a>
-        <a class="btn" href="/#contact">CONTACTO</a>
-      </div>
-    </div>
-  </div>
+      <div class="cta-row">
+        <a class="btn primary" href="/proposta-electrocap.pdf" target="_blank" rel="noreferrer">PROPOSTA (PDF)</a>
+        <a class="btn" href="/#blog">VER BLOG</a>
+        <a class="btn" href="/#contact">CONTACTO</a>
+      </div>
+    </div>
+  </div>
 
-    <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>ABOUT OUR PROJECT</h2>
-        <div class="hint">Visão geral</div>
-      </div>
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>ABOUT OUR PROJECT</h2>
+        <div class="hint">Visão geral</div>
+      </div>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>PROBLEMA</h3>
-          <p>
-            Treinadores e atletas não têm dados contínuos e integrados sobre stress físico (fadiga, HRV, etc.)
-            e performance técnica (postura, micro-ajustes) durante treino/competição.
-          </p>
-        </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>PROBLEMA</h3>
+          <p>
+            Treinadores e atletas não têm dados contínuos e integrados sobre stress físico (fadiga, HRV, etc.)
+            e performance técnica (postura, micro-ajustes) durante treino/competição.
+          </p>
+        </div>
 
-        <div class="card">
-          <h3>SOLUÇÃO</h3>
-          <p>
-            Wearable com sensores biométricos e IMU (acel/gyro), comunicação sem fios e packaging resistente à água,
-            permitindo análise em tempo real e correlação entre esforço e manobras.
-          </p>
-        </div>
-      </div>
+        <div class="card">
+          <h3>SOLUÇÃO</h3>
+          <p>
+            Wearable com sensores biométricos e IMU (acel/gyro), comunicação sem fios e packaging resistente à água,
+            permitindo análise em tempo real e correlação entre esforço e manobras.
+          </p>
+        </div>
+      </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>BENEFICIÁRIOS</h3>
-          <p>Atletas de vela competitiva, treinadores e investigação em ciência do desporto.</p>
-        </div>
-        <div class="card">
-          <h3>AMBIENTE</h3>
-          <p>Barcos pequenos / alta intensidade onde a contribuição física do atleta é crítica.</p>
-        </div>
-        <div class="card">
-          <h3>SUCESSO</h3>
-          <p>Precisão, resposta em tempo real e melhoria mensurável de performance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="grid-3">
+        <div class="card">
+          <h3>BENEFICIÁRIOS</h3>
+          <p>Atletas de vela competitiva, treinadores e investigação em ciência do desporto.</p>
+        </div>
+        <div class="card">
+          <h3>AMBIENTE</h3>
+          <p>Barcos pequenos / alta intensidade onde a contribuição física do atleta é crítica.</p>
+        </div>
+        <div class="card">
+          <h3>SUCESSO</h3>
+          <p>Precisão, resposta em tempo real e melhoria mensurável de performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="team">
-    <div class="container">
-      <div class="section-title">
-        <h2>TEAM</h2>
-        <div class="hint">Membros &amp; funções</div>
-      </div>
+  <section id="team">
+    <div class="container">
+      <div class="section-title">
+        <h2>MEET THE TEAM</h2>
+      </div>
 
-      <div class="team-grid">
-        <div class="card person">
-          <div class="avatar" aria-hidden="true"></div>
-          <div>
-            <b>Membro 1</b>
-            <div class="meta">Função</div>
-          </div>
-        </div>
+      <div class="team-grid-new">
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('https://via.placeholder.com/100x120');"></div>
+          <div class="person-info">
+            <h3>DIOGO CANDEIAS</h3>
+            <div class="course-id">LEEC IST-ID (Teu ID aqui)</div>
+            <div class="major">3rd Year Electrical and Computer Engineering</div>
+            <div class="person-links">
+              <a href="mailto:email@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="card person">
-          <div class="avatar" aria-hidden="true"></div>
-          <div>
-            <b>Membro 2</b>
-            <div class="meta">Função</div>
-          </div>
-        </div>
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('https://via.placeholder.com/100x120');"></div>
+          <div class="person-info">
+            <h3>MIGUEL DUARTE</h3>
+            <div class="course-id">LEEC IST-ID (Teu ID aqui)</div>
+            <div class="major">3rd Year Electrical and Computer Engineering</div>
+            <div class="person-links">
+              <a href="mailto:email@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="card person">
-          <div class="avatar" aria-hidden="true"></div>
-          <div>
-            <b>Membro 3</b>
-            <div class="meta">Função</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('https://via.placeholder.com/100x120');"></div>
+          <div class="person-info">
+            <h3>HUGO CHEN</h3>
+            <div class="course-id">LEEC IST-ID (Teu ID aqui)</div>
+            <div class="major">3rd Year Electrical and Computer Engineering</div>
+            <div class="person-links">
+              <a href="mailto:email@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
 
-    <section id="video">
-    <div class="container">
-      <div class="section-title">
-        <h2>VIDEO</h2>
-        <div class="hint">Demo / apresentação</div>
-      </div>
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('https://via.placeholder.com/100x120');"></div>
+          <div class="person-info">
+            <h3>GONÇALO LOPES</h3>
+            <div class="course-id">LEEC IST-ID (Teu ID aqui)</div>
+            <div class="major">3rd Year Electrical and Computer Engineering</div>
+            <div class="person-links">
+              <a href="mailto:email@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <p style="margin:0; color: var(--muted);">
-          Placeholder — quando tiverem vídeo, coloquem aqui o embed (YouTube/Drive).
-        </p>
-      </div>
-    </div>
-  </section>
+  <section id="video">
+    <div class="container">
+      <div class="section-title">
+        <h2>VIDEO</h2>
+        <div class="hint">Demo / apresentação</div>
+      </div>
 
-    <section id="blog">
-    <div class="container">
-      <div class="section-title">
-        <h2>BLOG</h2>
-        <div class="hint">Clica num cartão para abrir</div>
-      </div>
+      <div class="card">
+        <p style="margin:0; color: var(--muted);">
+          Placeholder — quando tiverem vídeo, coloquem aqui o embed (YouTube/Drive).
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <div class="blog-grid">
-        {posts.map((p) => (
-          <div
-            class="card post"
-            data-post
-            data-title={p.title}
-            data-date={p.date}
-            data-body={p.body}
-            role="button"
-            tabIndex="0"
-          >
-            <div class="thumb" aria-hidden="true"></div>
-            <div class="post-title">{p.title}</div>
-            <div class="post-date">{p.date}</div>
-            <div class="post-excerpt">{p.excerpt}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <section id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2>BLOG</h2>
+        <div class="hint">Clica num cartão para abrir</div>
+      </div>
 
-    <section id="partners">
-    <div class="container">
-      <div class="section-title">
-        <h2>PARTNERS</h2>
-        <div class="hint">Placeholders</div>
-      </div>
+      <div class="blog-grid">
+        {posts.map((p) => (
+          <div
+            class="card post"
+            data-post
+            data-title={p.title}
+            data-date={p.date}
+            data-body={p.body}
+            role="button"
+            tabIndex="0"
+          >
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="post-title">{p.title}</div>
+            <div class="post-date">{p.date}</div>
+            <div class="post-excerpt">{p.excerpt}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <div class="grid-3">
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Parceiro A
-        </div>
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Parceiro B
-  000 000   Parceiro C
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="partners">
+    <div class="container">
+      <div class="section-title">
+        <h2>PARTNERS</h2>
+        <div class="hint">Placeholders</div>
+      </div>
 
-    <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>CONTACT</h2>
-        <div class="hint">Email</div>
-      </div>
+      <div class="grid-3">
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro A
+        </div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro B
+        </div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
+          Parceiro C
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>EMAIL</h3>
-          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
-        </div>
-        <div class="card">
-          <h3>LINKS</h3>
-          <p>
-            <a href="/proposta-electrocap.pdf" style="color:var(--accent)" target="_blank" rel="noreferrer">Proposta (PDF)</a>
-          </p>
-        </div>
-        <div class="card">
-        Parceiro A
-        </div>
-        <div class="card">
-        Parceiro B
-        </div>
-        <div class="card">
-        Parceiro C
-        </div>
-      </div>
-    </div>
-  </section>
-</SiteLayout>
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>CONTACT</h2>
+        <div class="hint">Email</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>EMAIL</h3>
+          <p>equipa.electrocap@tecnico.ulisboa.pt</p>
+        </div>
+        <div class="card">
+          <h3>LINKS</h3>
+          <p>
+            <a href="/proposta-electrocap.pdf" style="color:var(--accent)" target="_blank" rel="noreferrer">Proposta (PDF)</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <style is:global>
   /* Cores Principais do ElectroCap */
   :root {
@@ -259,12 +279,12 @@ const posts = [
 
   h1, h2, h3 { color: var(--accent); }
 
-  /* --- NOVO HEADER COM MENU --- */
+  /* --- HEADER COM MENU --- */
   .site-header {
     background-color: var(--header-bg);
     color: var(--accent);
     padding: 15px 0;
-    position: sticky; /* Fica fixo no topo ao fazer scroll */
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -272,7 +292,7 @@ const posts = [
 
   .header-container {
     display: flex;
-    justify-content: space-between; /* Logo à esquerda, menu à direita */
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -295,7 +315,7 @@ const posts = [
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 25px; /* Espaço entre os itens */
+    gap: 25px;
   }
 
   .main-nav a {
@@ -305,9 +325,8 @@ const posts = [
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    gap: 10px;
     transition: color 0.3s;
-    /* Fazendo override aos estilos gerais de 'a' */
     background-color: transparent !important;
     padding: 5px !important;
     margin: 0 !important;
@@ -315,19 +334,18 @@ const posts = [
   }
 
   .main-nav a:hover {
-    color: #135b9c; /* Azul um pouco mais claro */
+    color: #135b9c;
   }
 
-  /* Ajuste dos Ícones */
   .main-nav i {
     font-size: 1.1em;
-    width: 1.2em; /* Garante que todos os ícones ocupam o mesmo espaço */
+    width: 1.2em;
     text-align: center;
   }
 
   /* --- CABEÇALHO PRINCIPAL (HERO) --- */
   .hero {
-    padding-top: 80px; /* Mais espaço para o menu */
+    padding-top: 80px;
   }
   .hero-card {
     background: linear-gradient(135deg, #0f2c59 0%, #1a4989 100%);
@@ -364,7 +382,7 @@ const posts = [
   }
   .btn {
     background-color: rgba(255,255,255,0.15);
-    color: white !important; /* Forçando a cor */
+    color: white !important;
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 8px;
@@ -396,7 +414,7 @@ const posts = [
     letter-spacing: 1px;
   }
 
-  /* --- CARTÕES (CARDS) --- */
+  /* --- CARTÕES GERAIS --- */
   .card {
     background: var(--card-bg);
     padding: 25px;
@@ -410,7 +428,7 @@ const posts = [
   }
   .card h3 { margin-top: 0; }
 
-  /* --- GRELHAS (GRIDS) --- */
+  /* --- GRELHAS GERAIS --- */
   .grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -422,34 +440,91 @@ const posts = [
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
   }
-  .team-grid, .blog-grid {
+  .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
   }
 
-  /* --- FOTOS DE EQUIPA E BLOG --- */
-  .avatar {
-    background-color: #e0e6ed;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
+  /* --- ESTILO NOVO DA EQUIPA (LADO A LADO) --- */
+  .team-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
   }
+  .person-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+  }
+  .person-img {
+    width: 100px;
+    height: 120px;
+    background-color: #e0e6ed;
+    border-radius: 8px; /* Cantos arredondados */
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  .person-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: var(--text-color);
+    text-transform: uppercase;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .person-info .course-id {
+    color: #4b633d; /* Verde escuro igual ao do outro grupo */
+    font-weight: 600;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+  }
+  .person-info .major {
+    font-size: 0.85em;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .person-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.8em;
+    color: var(--text-color) !important;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Formato de "comprimido" */
+    text-decoration: none;
+    transition: all 0.2s;
+    background: transparent;
+  }
+  .btn-small:hover {
+    background-color: #f4f7f6;
+    border-color: #999;
+  }
+
+  /* --- FOTOS DO BLOG --- */
   .thumb {
     background-color: #e0e6ed;
     height: 160px;
     border-radius: 8px;
     margin-bottom: 15px;
   }
-  .card.person { text-align: center; }
-  .meta { color: var(--muted); font-size: 0.9em; }
   
-  /* Blog Textos */
+  /* Textos do Blog */
   .post-title { font-weight: bold; font-size: 1.3em; color: var(--accent); }
   .post-date { font-size: 0.85em; color: var(--muted); margin-bottom: 10px; }
   .post-excerpt { color: var(--text-color); font-size: 0.95em; }
 
-  /* Deslizar suavemente ao clicar nos botões */
+  /* Scroll suave */
   html { scroll-behavior: smooth; }
 </style>
+</SiteLayout>
