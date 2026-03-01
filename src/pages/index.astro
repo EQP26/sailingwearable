@@ -185,7 +185,7 @@ image: "/sailingwearable/semana1.jpeg", // A tua foto gravada
       <div class="blog-grid">
         {posts.map((p) => (
           <div class="card post-card" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
-            <div class="post-thumb" style={`background-image: url(${p.image}); background-size: cover; background-position: center; height: 200px; border-radius: 12px; margin-bottom: 20px;`}></div>
+            <div class="post-thumb" style={`background-image: url(${p.image}); background-size: contain; background-repeat: no-repeat; background-position: center; height: 200px; border-radius: 12px; margin-bottom: 20px; background-color: #f1f2f6;`}></div>
             <div class="post-meta">
               <span class="post-date">{p.date}</span>
               <h3 class="post-title">{p.title}</h3>
