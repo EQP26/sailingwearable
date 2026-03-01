@@ -205,27 +205,6 @@ const { title = "High-Performance Sailing Biometric Wearable" } = Astro.props;
   </head>
 
   <body>
-    <header class="nav">
-      <div class="container nav-inner">
-        <!-- marca curta + título curto -->
-        <a class="brand" href="/#top" aria-label="Topo">
-          <span class="dot" aria-hidden="true"></span>
-          <span>High-Performance Sailing Biometric Wearable</span>
-          <span>High-Performance Sailing Biometric Wearable</span>
-        </a>
-
-        <!-- links com "/#..." funcionam mesmo que estejas noutra rota -->
-        <nav class="links" aria-label="Navegação">
-          <a href="/#about">ABOUT</a>
-          <a href="/#team">TEAM</a>
-          <a href="/#video">VIDEO</a>
-          <a href="/#blog">BLOG</a>
-          <a href="/#partners">PARTNERS</a>
-          <a href="/#contact">CONTACT</a>
-        </nav>
-      </div>
-    </header>
-
     <main id="top">
       <slot />
     </main>
