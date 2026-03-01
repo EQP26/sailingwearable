@@ -7,31 +7,30 @@ const posts = [
   {
     title: "WEEK 1",
     date: "2026-03-01",
-    excerpt: "Primeiras decisões do projeto.",
-    body: "Resumo curto: setup inicial, requisitos, divisão de tarefas e primeiras decisões (sensores, arquitetura, plano de testes)."
+    excerpt: "Project Kick-off and Decisions.",
+    body: "Initial setup, requirements definition, task division, and first technical decisions (sensors, architecture, and testing plan)."
   },
   {
     title: "WEEK 2",
     date: "2026-03-08",
-    excerpt: "Escolha de sensores.",
-    body: "Resumo curto: seleção preliminar de sensores biométricos e IMU, critérios (precisão, robustez, consumo), e próximos passos."
+    excerpt: "Sensor Selection Phase.",
+    body: "Preliminary selection of biometric and IMU sensors based on precision, robustness, and power consumption criteria."
   }
 ];
 ---
 
 <SiteLayout title={`Knotix — ${projectTagline}`}>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <header class="site-header">
     <div class="header-container">
-      <a href="/" class="site-logo">Knotix</a>
+      <a href="#top" class="site-logo">Knotix</a>
       <nav class="main-nav">
         <ul>
           <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
           <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
           <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
           <li><a href="#blog"><i class="fas fa-bold"></i> Blog</a></li>
-          <li><a href="#partners"><i class="fas fa-handshake"></i> Partners</a></li>
           <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
       </nav>
@@ -42,15 +41,10 @@ const posts = [
     <div class="hero-card">
       <div class="kicker">AN ELECTROCAP PROJECT</div>
       <h1>KNOTIX</h1>
-
-      <p class="subtitle">
-        A wearable system for sailing athletes that measures physical effort and technical performance in real-time.
-      </p>
-
+      <p class="subtitle">A wearable system for sailing athletes that measures physical effort and technical performance in real-time.</p>
       <div class="cta-row">
-        <a class="btn primary" href="/proposta-electrocap.pdf" target="_blank" rel="noreferrer">PROPOSAL (PDF)</a>
-        <a class="btn" href="/#blog">VIEW BLOG</a>
-        <a class="btn" href="/#contact">CONTACT US</a>
+        <a class="btn primary" href="/sailingwearable/proposta-electrocap.pdf" target="_blank">PROPOSAL (PDF)</a>
+        <a class="btn" href="#blog">VIEW BLOG</a>
       </div>
     </div>
   </div>
@@ -61,46 +55,31 @@ const posts = [
         <h2>ABOUT OUR PROJECT</h2>
         <div class="hint">Overview</div>
       </div>
-
       <div class="grid-2">
         <div class="card">
-          <h3><i class="fas fa-exclamation-circle" style="color: var(--accent); margin-right: 8px;"></i> THE PROBLEM</h3>
-          <p>
-            Coaches and athletes lack continuous, integrated data on physical stress (such as fatigue and HRV) and technical performance (posture and micro-adjustments) during active training and competition.
-          </p>
+          <h3><i class="fas fa-exclamation-circle"></i> THE PROBLEM</h3>
+          <p>Coaches and athletes lack continuous, integrated data on physical stress and technical performance during competition.</p>
         </div>
-
         <div class="card">
-          <h3><i class="fas fa-lightbulb" style="color: var(--accent); margin-right: 8px;"></i> OUR SOLUTION</h3>
-          <p>
-            A wearable system equipped with biometric sensors and an IMU (accelerometer/gyroscope). Featuring wireless communication and a water-resistant design, it enables real-time analysis to correlate physical effort with sailing maneuvers.
-          </p>
+          <h3><i class="fas fa-lightbulb"></i> OUR SOLUTION</h3>
+          <p>A wearable system with biometric sensors and IMU, featuring water-resistant design and real-time data correlation.</p>
         </div>
       </div>
-
       <div class="grid-3">
-        <div class="card" style="text-align: center;">
-          <div style="margin-bottom: 15px;">
-            <i class="fas fa-crosshairs" style="font-size: 2.5em; color: var(--accent);"></i>
-          </div>
+        <div class="card tech-feature">
+          <i class="fas fa-crosshairs"></i>
           <h3>TARGET USERS</h3>
-          <p style="font-size: 0.95em; color: var(--muted);">Competitive sailing athletes, high-performance coaches, and sports science researchers.</p>
+          <p>Competitive athletes and sports researchers.</p>
         </div>
-        
-        <div class="card" style="text-align: center;">
-          <div style="margin-bottom: 15px;">
-            <i class="fas fa-water" style="font-size: 2.5em; color: var(--accent);"></i>
-          </div>
+        <div class="card tech-feature">
+          <i class="fas fa-water"></i>
           <h3>ENVIRONMENT</h3>
-          <p style="font-size: 0.95em; color: var(--muted);">Optimized for small, high-intensity boats where the athlete's physical contribution is critical.</p>
+          <p>Optimized for high-intensity small boat sailing.</p>
         </div>
-        
-        <div class="card" style="text-align: center;">
-          <div style="margin-bottom: 15px;">
-            <i class="fas fa-chart-line" style="font-size: 2.5em; color: var(--accent);"></i>
-          </div>
-          <h3>SUCCESS METRICS</h3>
-          <p style="font-size: 0.95em; color: var(--muted);">Data precision, real-time feedback response, and measurable improvements in sailing performance.</p>
+        <div class="card tech-feature">
+          <i class="fas fa-chart-line"></i>
+          <h3>SUCCESS</h3>
+          <p>Precision and measurable performance gain.</p>
         </div>
       </div>
     </div>
@@ -108,77 +87,48 @@ const posts = [
 
   <section id="team">
     <div class="container">
-      <div class="section-title">
-        <h2>MEET THE TEAM</h2>
-      </div>
-
+      <div class="section-title"><h2>MEET THE TEAM</h2></div>
       <div class="team-grid-new">
         <div class="card person-card">
           <div class="person-img" style="background-image: url('/sailingwearable/Diogo.jpeg');"></div>
           <div class="person-info">
             <h3>DIOGO CANDEIAS</h3>
             <div class="course-id">LEE IST-ID 110584</div>
-            <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
-              <a href="mailto:email-do-diogo@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:diogo.candeias@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
             </div>
           </div>
         </div>
-
         <div class="card person-card">
           <div class="person-img" style="background-image: url('/sailingwearable/Miguel.jpeg');"></div>
           <div class="person-info">
             <h3>MIGUEL DUARTE</h3>
             <div class="course-id">LEE IST-ID 110218</div>
-            <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
-              <a href="mailto:email-do-miguel@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:miguel.duarte@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
             </div>
           </div>
         </div>
-
         <div class="card person-card">
           <div class="person-img" style="background-image: url('/sailingwearable/Hugo.jpeg');"></div>
           <div class="person-info">
             <h3>HUGO CHEN</h3>
             <div class="course-id">LEEC IST-ID 109566</div>
-            <div class="major">3rd Year Electrical and Computer Engineering</div>
             <div class="person-links">
-              <a href="mailto:email-do-hugo@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:hugo.chen@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
             </div>
           </div>
         </div>
-
         <div class="card person-card">
           <div class="person-img" style="background-image: url('/sailingwearable/Goncalo.jpeg');"></div>
           <div class="person-info">
             <h3>GONÇALO LOPES</h3>
             <div class="course-id">LEE IST-ID 111160</div>
-            <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
-              <a href="mailto:email-do-goncalo@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" class="btn-small"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:goncalo.lopes@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="video">
-    <div class="container">
-      <div class="section-title">
-        <h2>VIDEO</h2>
-        <div class="hint">Demo / Presentation</div>
-      </div>
-
-      <div class="card">
-        <p style="margin:0; color: var(--muted); text-align: center;">
-          Placeholder — embed your YouTube or Google Drive video here.
-        </p>
       </div>
     </div>
   </section>
@@ -187,21 +137,12 @@ const posts = [
     <div class="container">
       <div class="section-title">
         <h2>BLOG</h2>
-        <div class="hint">Click a card to open</div>
+        <div class="hint">Click to read more</div>
       </div>
-
       <div class="blog-grid">
         {posts.map((p) => (
-          <div
-            class="card post"
-            data-post
-            data-title={p.title}
-            data-date={p.date}
-            data-body={p.body}
-            role="button"
-            tabIndex="0"
-          >
-            <div class="thumb" aria-hidden="true"></div>
+          <div class="card post" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
+            <div class="thumb"></div>
             <div class="post-title">{p.title}</div>
             <div class="post-date">{p.date}</div>
             <div class="post-excerpt">{p.excerpt}</div>
@@ -211,259 +152,112 @@ const posts = [
     </div>
   </section>
 
-  <section id="partners">
-    <div class="container">
-      <div class="section-title">
-        <h2>PARTNERS</h2>
-        <div class="hint">Placeholders</div>
-      </div>
-
-      <div class="grid-3">
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Partner A
-        </div>
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Partner B
-        </div>
-        <div class="card" style="display:flex; align-items:center; justify-content:center; min-height:90px; color:var(--muted); letter-spacing:.08em;">
-          Partner C
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="contact">
     <div class="container">
-      <div class="section-title">
-        <h2>CONTACT US</h2>
-        <div class="hint">Get in touch</div>
-      </div>
-
       <div class="grid-2">
         <div class="card">
-          <h3>EMAIL</h3>
+          <h3>CONTACT US</h3>
           <p>equipa.electrocap@tecnico.ulisboa.pt</p>
         </div>
         <div class="card">
           <h3>QUICK LINKS</h3>
-          <p>
-            <a href="/proposta-electrocap.pdf" style="color:var(--accent); text-decoration: none; font-weight: bold;" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> Download Proposal (PDF)</a>
-          </p>
+          <a href="/sailingwearable/proposta-electrocap.pdf" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">
+            <i class="fas fa-file-pdf"></i> Download Project Proposal
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+  <a href="#top" id="backToTop" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
 <style is:global>
-  /* Cores Principais do Knotix */
   :root {
     --bg-color: #f4f7f6;
     --text-color: #333333;
-    --accent: #054a91; /* Azul Engenharia (mais elétrico e moderno) */
+    --accent: #054a91;
     --muted: #6c7a89;
     --card-bg: #ffffff;
     --header-bg: #ffffff;
   }
 
-  body {
-    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
+  body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+  section { padding: 80px 0 40px; border-bottom: 1px solid #e1e8ed; }
 
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
+  /* HEADER */
+  .site-header { background: var(--header-bg); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .site-logo { font-size: 1.6em; font-weight: 800; text-decoration: none; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; }
+  .main-nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+  .main-nav a { text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.9em; }
 
-  section {
-    padding: 60px 0 40px 0;
-    border-bottom: 1px solid #e1e8ed;
-  }
+  /* HERO */
+  .hero-card { background: linear-gradient(135deg, #054a91 0%, #172a3a 100%); color: white; padding: 60px 40px; border-radius: 12px; text-align: center; }
+  .hero-card h1 { font-size: 3.5em; margin: 10px 0; color: white; }
+  .hero-card .subtitle { font-size: 1.2em; opacity: 0.9; margin-bottom: 30px; }
+  .kicker { font-weight: bold; letter-spacing: 2px; color: #81a4cd; font-size: 0.8em; }
+  .btn { display: inline-block; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.3s; margin: 5px; }
+  .btn.primary { background: white; color: var(--accent); }
+  .btn:not(.primary) { background: rgba(255,255,255,0.1); color: white; border: 1px solid white; }
 
-  h1, h2, h3 { color: var(--accent); }
+  /* CARDS */
+  .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid transparent; }
+  .card:hover { transform: translateY(-5px); border-top-color: var(--accent); }
+  .tech-feature i { font-size: 2em; color: var(--accent); margin-bottom: 15px; }
+  .grid-2, .grid-3 { display: grid; gap: 20px; margin-top: 20px; }
+  .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 
-  /* --- HEADER COM MENU --- */
-  .site-header {
-    background-color: var(--header-bg);
-    color: var(--accent);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
+  /* TEAM */
+  .team-grid-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .person-card { display: flex; align-items: center; gap: 20px; text-align: left; }
+  .person-img { width: 100px; height: 100px; border-radius: 50%; background-size: cover; background-position: center; flex-shrink: 0; border: 3px solid #eee; }
+  .course-id { font-weight: bold; font-size: 0.8em; color: var(--muted); margin-bottom: 10px; }
+  .btn-small { text-decoration: none; font-size: 0.8em; padding: 5px 12px; border: 1px solid #ddd; border-radius: 4px; color: var(--text-color); }
 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .site-logo {
-    font-size: 1.6em;
-    font-weight: 800;
-    text-decoration: none;
-    color: var(--accent);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-
-  .main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
-  }
-
-  .main-nav a {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.3s;
-    background-color: transparent !important;
-    padding: 5px !important;
-    margin: 0 !important;
-  }
-
-  .main-nav a:hover { color: #3e7cb1; }
-  .main-nav i { font-size: 1.1em; width: 1.2em; text-align: center; }
-
-  /* --- CABEÇALHO PRINCIPAL (HERO) --- */
-  .hero { padding-top: 80px; }
-  .hero-card {
-    background: linear-gradient(135deg, #054a91 0%, #172a3a 100%); 
+  /* BACK TO TOP BUTTON */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
     color: white;
-    padding: 60px 40px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(5, 74, 145, 0.2);
-  }
-  .hero-card h1 { color: white; font-size: 3.5em; margin: 10px 0; letter-spacing: 4px; }
-  .hero-card .subtitle { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
-  .hero-card .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: #81a4cd; font-weight: bold; }
-
-  /* --- BOTÕES GERAIS --- */
-  .cta-row { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-  .btn {
-    background-color: rgba(255,255,255,0.15);
-    color: white !important;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 6px; 
-    font-weight: 600;
-    transition: 0.3s;
-    display: inline-block;
-  }
-  .btn:hover { background-color: rgba(255,255,255,0.3); }
-  .btn.primary { background-color: white; color: var(--accent) !important; }
-  .btn.primary:hover { background-color: #f0f0f0; }
-
-  /* --- TÍTULOS DAS SECÇÕES --- */
-  .section-title { text-align: center; margin-bottom: 40px; }
-  .section-title h2 { margin-bottom: 5px; font-size: 2.2em; font-weight: 800; }
-  .section-title .hint { color: var(--accent); text-transform: uppercase; font-size: 0.85em; font-weight: bold; letter-spacing: 1px; }
-
-  /* --- CARTÕES GERAIS --- */
-  .card {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: 8px;
-    border-top: 4px solid transparent;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s, border-top 0.2s;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.08);
-    border-top: 4px solid var(--accent); 
-  }
-  .card h3 { margin-top: 0; font-weight: 700; }
-
-  /* --- GRELHAS --- */
-  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 25px; }
-  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-  .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-
-  /* --- EQUIPA --- */
-  .team-grid-new {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 24px;
-  }
-  .person-card {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    text-align: left;
-    padding: 24px;
-  }
-  .person-img {
-    width: 110px;
-    height: 110px;
-    background-color: #e0e6ed;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    border: 3px solid #f4f7f6;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
-  }
-  .person-info h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.15em;
-    color: var(--accent); 
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  .person-info .course-id {
-    color: #172a3a; 
-    font-weight: 700;
-    font-size: 0.85em;
-    margin-bottom: 5px;
-  }
-  .person-info .major {
-    font-size: 0.85em;
-    color: var(--muted);
-    margin-bottom: 15px;
-    line-height: 1.3;
-  }
-  .person-links { display: flex; gap: 8px; flex-wrap: wrap; }
-  
-  .btn-small {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    font-size: 0.8em;
-    font-weight: 600;
-    color: var(--text-color) !important;
-    border: 1px solid #d1d8e0;
-    border-radius: 4px; 
+    justify-content: center;
     text-decoration: none;
-    transition: all 0.2s;
-    background: transparent;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
   }
-  .btn-small:hover { background-color: var(--accent); color: white !important; border-color: var(--accent); }
-
-  /* --- FOTOS DO BLOG --- */
-  .thumb { background-color: #e0e6ed; height: 160px; border-radius: 6px; margin-bottom: 15px; }
-  .post-title { font-weight: 800; font-size: 1.2em; color: var(--accent); }
-  .post-date { font-size: 0.85em; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
-  .post-excerpt { color: var(--text-color); font-size: 0.95em; }
+  #backToTop.show { opacity: 1; visibility: visible; }
+  #backToTop:hover { transform: translateY(-5px); background: #172a3a; }
 
   html { scroll-behavior: smooth; }
+
+  @media (max-width: 768px) {
+    .hero-card h1 { font-size: 2.5em; }
+    .header-container { flex-direction: column; gap: 10px; }
+  }
 </style>
+
+<script is:inline>
+  // Script para mostrar/esconder a seta de subir
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  };
+</script>
 </SiteLayout>
