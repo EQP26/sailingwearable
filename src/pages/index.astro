@@ -3,7 +3,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 
 const projectTagline = "High-Performance Sailing Biometric Wearable";
 
-// BLOG POSTS - Estrutura completa recuperada
+// BLOG POSTS - Estrutura de dados completa
 const posts = [
   {
     title: "WEEK 1",
@@ -24,7 +24,7 @@ const posts = [
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <header class="site-header">
-    <div class="container header-flex">
+    <div class="container header-content">
       <a href="#top" class="site-logo">Knotix</a>
       <nav class="main-nav">
         <ul>
@@ -33,7 +33,7 @@ const posts = [
           <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
           <li><a href="#blog"><i class="fas fa-bold"></i> Blog</a></li>
           <li><a href="#partners"><i class="fas fa-handshake"></i> Partners</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -57,24 +57,28 @@ const posts = [
     <div class="container">
       <div class="section-title">
         <h2>ABOUT OUR PROJECT</h2>
-        <div class="hint">Technical Overview</div>
+        <div class="hint">Technical Roadmap</div>
       </div>
 
       <div class="grid-2">
         <div class="card">
           <div class="card-icon"><i class="fas fa-exclamation-circle"></i></div>
           <h3>THE PROBLEM</h3>
-          <p>Competitive sailing lacks integrated, real-time feedback systems. Athletes and coaches cannot currently correlate physical fatigue with specific maneuvers on the water.</p>
+          <p>
+            Competitive sailing lacks integrated, real-time feedback systems. Athletes and coaches cannot currently correlate physical fatigue with specific technical maneuvers on the water.
+          </p>
         </div>
 
         <div class="card">
           <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
           <h3>OUR SOLUTION</h3>
-          <p>Knotix bridges this gap with a rugged, water-resistant wearable. By combining high-precision IMU data with biometric sensors, we provide a holistic view of performance.</p>
+          <p>
+            Knotix bridges this gap with a rugged, water-resistant wearable. By combining high-precision IMU data with biometric sensors, we provide a holistic view of performance under pressure.
+          </p>
         </div>
       </div>
 
-      <div class="grid-3" style="margin-top: 30px;">
+      <div class="grid-3" style="margin-top: 40px;">
         <div class="card tech-feature">
           <i class="fas fa-crosshairs"></i>
           <h3>TARGET USERS</h3>
@@ -121,7 +125,7 @@ const posts = [
             <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
               <a href="mailto:miguel.duarte@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" target="_blank" class="btn-small linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="#" target="_blank" class="btn-small linkedin-box"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
           </div>
         </div>
@@ -131,7 +135,7 @@ const posts = [
           <div class="person-info">
             <h3>HUGO CHEN</h3>
             <div class="course-id">LEEC IST-ID 109566</div>
-            <div class="major">3rd Year Electrical and Computer Engineering</div>
+            <div class="major">3rd Year Electrical Engineering</div>
             <div class="person-links">
               <a href="mailto:hugo.chen@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
             </div>
@@ -146,7 +150,7 @@ const posts = [
             <div class="major">3rd Year Electronics Engineering</div>
             <div class="person-links">
               <a href="mailto:goncalo.lopes@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
-              <a href="#" target="_blank" class="btn-small linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="#" target="_blank" class="btn-small linkedin-box"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
           </div>
         </div>
@@ -159,9 +163,9 @@ const posts = [
       <div class="section-title">
         <h2>PROJECT VIDEO</h2>
       </div>
-      <div class="card video-placeholder">
+      <div class="card video-container">
         <i class="fas fa-play-circle"></i>
-        <p>Demonstration Placeholder</p>
+        <p>Demonstration Placeholder - Ready for Embed</p>
       </div>
     </div>
   </section>
@@ -173,11 +177,13 @@ const posts = [
       </div>
       <div class="blog-grid">
         {posts.map((p) => (
-          <div class="card post" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
-            <div class="thumb"></div>
-            <div class="post-title">{p.title}</div>
-            <div class="post-date">{p.date}</div>
-            <div class="post-excerpt">{p.excerpt}</div>
+          <div class="card post-card" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
+            <div class="post-thumb"></div>
+            <div class="post-meta">
+              <span class="post-date">{p.date}</span>
+              <h3 class="post-title">{p.title}</h3>
+            </div>
+            <p class="post-excerpt">{p.excerpt}</p>
           </div>
         ))}
       </div>
@@ -187,122 +193,285 @@ const posts = [
   <section id="partners">
     <div class="container">
       <div class="section-title">
-        <h2>PARTNERS & SUPPORT</h2>
+        <h2>PARTNERS</h2>
       </div>
       <div class="grid-3">
-        <div class="card partner-card">Partner A</div>
-        <div class="card partner-card">Partner B</div>
-        <div class="card partner-card">Partner C</div>
+        <div class="card partner-slot">Partner A</div>
+        <div class="card partner-slot">Partner B</div>
+        <div class="card partner-slot">Partner C</div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>CONTACT</h2>
+  <footer class="knotix-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">KNOTIX</span>
+        <p>Sailing Biometric Research Lab</p>
       </div>
-      <div class="card" style="text-align: center; padding: 40px;">
-        <p>For inquiries, please reach out to the individual team members above.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="knotix-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <span class="f-logo">KNOTIX</span>
-          <p>Sailing Biometric Research</p>
-        </div>
-        <div class="footer-legal">
-          <p>&copy; 2026 ElectroCap.</p>
-        </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 ElectroCap.</p>
       </div>
     </div>
   </footer>
 
-  <a href="#top" id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+  <a href="#top" id="backToTop" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
 
 <style is:global>
+  /* CONFIGURAÇÃO COMPLETA DE ESTILOS (O PESO QUE PEDISTE) */
   :root {
     --bg-color: #f8fafb;
-    --text-color: #2d3436;
+    --text-color: #1e272e;
     --accent: #054a91;
-    --accent-dark: #172a3a;
-    --muted: #636e72;
+    --accent-dark: #0a3d62;
+    --muted: #718093;
     --card-bg: #ffffff;
-    --header-h: 80px;
+    --header-h: 85px;
+    --container-max: 1140px;
   }
 
   * { box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; line-height: 1.7; }
+  body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    margin: 0; 
+    line-height: 1.8; 
+  }
   html { scroll-behavior: smooth; }
-  .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
-  section { padding: 90px 0 70px; border-bottom: 1px solid #dfe6e9; }
+  
+  .container { 
+    max-width: var(--container-max); 
+    margin: 0 auto; 
+    padding: 0 25px; 
+  }
+  
+  section { padding: 100px 0 80px; border-bottom: 1px solid #dcdde1; }
 
-  /* HEADER CORRIGIDO */
-  .site-header { background: #ffffff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.08); height: var(--header-h); }
-  .header-flex { display: flex; justify-content: space-between; align-items: center; height: 100%; }
-  .site-logo { font-size: 1.7em; font-weight: 900; text-decoration: none; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
-  .main-nav ul { list-style: none; display: flex; gap: 15px; margin: 0; padding: 0; flex-wrap: nowrap; }
-  .main-nav a { text-decoration: none; color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; transition: 0.2s; white-space: nowrap; }
+  /* HEADER ALINHADO E COMPLETO */
+  .site-header { 
+    background: #ffffff; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+    height: var(--header-h); 
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .header-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+  }
+  
+  .site-logo { 
+    font-size: 1.8em; 
+    font-weight: 900; 
+    text-decoration: none; 
+    color: var(--accent); 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+  }
+  
+  .main-nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .main-nav a { 
+    text-decoration: none; 
+    color: var(--accent); 
+    font-weight: 700; 
+    font-size: 0.85em; 
+    text-transform: uppercase; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  .main-nav a:hover { color: var(--accent-dark); transform: translateY(-1px); }
 
-  /* HERO BOX */
-  .hero { padding: 60px 25px; }
-  .hero-card { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color: white; padding: 100px 50px; border-radius: 20px; text-align: center; box-shadow: 0 20px 40px rgba(5, 74, 145, 0.25); }
-  .hero-card h1 { font-size: clamp(2.5em, 8vw, 4.5em); margin: 15px 0; color: white; letter-spacing: 5px; font-weight: 900; }
-  .hero-card .subtitle { font-size: 1.2em; opacity: 0.95; margin-bottom: 45px; max-width: 750px; margin-left: auto; margin-right: auto; }
-  .kicker { font-weight: 800; letter-spacing: 4px; color: #81a4cd; font-size: 0.9em; text-transform: uppercase; }
+  /* HERO - IMPACTO TOTAL */
+  .hero { padding-top: 50px; padding-bottom: 50px; }
+  .hero-card { 
+    background: linear-gradient(145deg, var(--accent) 0%, var(--accent-dark) 100%); 
+    color: white; 
+    padding: 110px 60px; 
+    border-radius: 24px; 
+    text-align: center; 
+    box-shadow: 0 25px 50px -12px rgba(5, 74, 145, 0.4); 
+  }
+  .hero-card h1 { 
+    font-size: clamp(3em, 8vw, 5em); 
+    margin: 15px 0; 
+    color: white; 
+    letter-spacing: 6px; 
+    font-weight: 900; 
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .hero-card .subtitle { 
+    font-size: 1.4em; 
+    opacity: 0.9; 
+    margin-bottom: 50px; 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-weight: 300;
+  }
+  .kicker { font-weight: 800; letter-spacing: 5px; color: #81a4cd; font-size: 1em; text-transform: uppercase; }
+
+  /* BOTÕES STARTUP */
   .cta-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-  .btn { padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; }
-  .btn.primary { background: white; color: var(--accent); }
-  .btn:not(.primary) { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.3); }
+  .btn { 
+    padding: 18px 36px; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    font-weight: 800; 
+    transition: 0.4s; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 12px; 
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+  .btn.primary { background: white; color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+  .btn.primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+  .btn:not(.primary) { 
+    background: rgba(255,255,255,0.1); 
+    color: white; 
+    border: 1.5px solid rgba(255,255,255,0.4); 
+    backdrop-filter: blur(5px);
+  }
+  .btn:not(.primary):hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
 
-  /* CARDS */
-  .card { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.4s; border-top: 5px solid transparent; }
-  .card:hover { transform: translateY(-8px); border-top-color: var(--accent); }
-  .card h3 { margin: 0 0 15px; color: var(--accent-dark); font-size: 1.2em; font-weight: 800; }
-  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+  /* CARDS COM BORDAS TÉCNICAS */
+  .card { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 18px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04); 
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border-top: 6px solid var(--accent); 
+    position: relative;
+  }
+  .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+  .card h3 { margin: 0 0 20px; color: var(--accent-dark); font-size: 1.3em; font-weight: 800; }
+  .card-icon { font-size: 2.2em; color: var(--accent); margin-bottom: 20px; }
+
+  /* GRELHAS */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
 
   /* SECTION TITLES */
-  .section-title { text-align: center; margin-bottom: 60px; }
-  .section-title h2 { font-size: 2.5em; margin-bottom: 12px; color: var(--accent-dark); font-weight: 900; }
-  .hint { text-transform: uppercase; letter-spacing: 3px; color: var(--accent); font-size: 0.85em; font-weight: 800; }
+  .section-title { text-align: center; margin-bottom: 70px; }
+  .section-title h2 { font-size: 2.8em; margin-bottom: 15px; color: var(--accent-dark); font-weight: 900; letter-spacing: -1px; }
+  .hint { text-transform: uppercase; letter-spacing: 4px; color: var(--accent); font-size: 0.9em; font-weight: 800; }
 
-  /* TEAM CIRCULAR */
-  .team-grid-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-  .person-card { display: flex; align-items: center; gap: 20px; padding: 25px; }
-  .person-img { width: 100px; height: 100px; border-radius: 50%; background-size: cover; background-position: center; flex-shrink: 0; border: 4px solid #f1f2f6; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-  .person-info h3 { margin: 0 0 5px; font-size: 1.1em; font-weight: 900; }
-  .course-id { font-weight: 900; font-size: 0.8em; color: var(--accent-dark); margin-bottom: 2px; }
-  .major { font-size: 0.75em; color: var(--muted); margin-bottom: 12px; line-height: 1.4; }
-  .btn-small { text-decoration: none; font-size: 0.7em; padding: 6px 14px; border: 1.5px solid #d1d8e0; border-radius: 6px; color: var(--text-color); font-weight: 700; transition: 0.3s; display: inline-flex; align-items: center; gap: 6px; }
+  /* TEAM DESIGN CIRCULAR PREMIUM */
+  .team-grid-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 35px; }
+  .person-card { display: flex; align-items: center; gap: 30px; padding: 35px; }
+  .person-img { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    background-size: cover; 
+    background-position: center; 
+    flex-shrink: 0; 
+    border: 5px solid #f1f2f6; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+  }
+  .person-info h3 { margin: 0 0 5px; font-size: 1.4em; font-weight: 900; color: var(--accent-dark); }
+  .course-id { font-weight: 900; font-size: 0.95em; color: var(--accent); margin-bottom: 5px; }
+  .major { font-size: 0.85em; color: var(--muted); margin-bottom: 20px; font-weight: 600; }
+  .person-links { display: flex; gap: 12px; }
+  .btn-small { 
+    text-decoration: none; 
+    font-size: 0.8em; 
+    padding: 8px 20px; 
+    border: 2px solid #d1d8e0; 
+    border-radius: 8px; 
+    color: var(--text-color); 
+    font-weight: 800; 
+    transition: 0.3s; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+  }
   .btn-small:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  .linkedin-box { color: #0077b5; border-color: #0077b5; }
+  .linkedin-box:hover { background: #0077b5; color: white; }
 
-  /* FOOTER DARK 2026 */
-  .knotix-footer { background: #0f172a; color: #fff; padding: 60px 0; border-top: 5px solid var(--accent); }
-  .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-  .f-logo { font-size: 1.8em; font-weight: 900; letter-spacing: 3px; color: var(--accent); }
-  .footer-legal p { font-weight: 700; color: #94a3b8; font-size: 1.1em; margin: 0; }
+  /* FOOTER DARK 2026 PREMIUM */
+  .knotix-footer { 
+    background: #0a0e14; 
+    color: #fff; 
+    padding: 80px 0; 
+    border-top: 8px solid var(--accent); 
+  }
+  .footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
+  .f-logo { font-size: 2em; font-weight: 900; letter-spacing: 4px; color: var(--accent); }
+  .footer-brand p { color: #576574; font-weight: 700; margin: 5px 0 0; font-size: 1em; }
+  .footer-copy p { font-weight: 800; color: #8395a7; font-size: 1.2em; margin: 0; }
+
+  /* BLOG / VIDEO PLACEHOLDERS */
+  .video-container { text-align: center; padding: 80px; color: var(--muted); border: 3px dashed #dcdde1; background: #f1f2f6; }
+  .video-container i { font-size: 4.5em; color: var(--accent); opacity: 0.5; margin-bottom: 25px; display: block; }
+  .post-thumb { background: #dfe6e9; height: 180px; border-radius: 12px; margin-bottom: 25px; }
+  .post-title { font-weight: 900; font-size: 1.4em; color: var(--accent-dark); margin: 10px 0; }
+  .post-date { font-size: 0.9em; color: var(--accent); font-weight: 800; text-transform: uppercase; }
+
+  /* PARTNERS */
+  .partner-slot { height: 130px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: 900; letter-spacing: 4px; font-size: 1.2em; background: #fff; }
 
   /* BACK TO TOP */
-  #backToTop { position: fixed; bottom: 40px; right: 40px; background: var(--accent); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 10px 25px rgba(5, 74, 145, 0.3); opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; }
+  #backToTop { 
+    position: fixed; 
+    bottom: 50px; 
+    right: 50px; 
+    background: var(--accent); 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    box-shadow: 0 15px 30px rgba(5, 74, 145, 0.4); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    z-index: 1000; 
+    font-size: 1.3em;
+  }
   #backToTop.show { opacity: 1; visibility: visible; }
+  #backToTop:hover { transform: translateY(-10px) scale(1.1); background: var(--accent-dark); }
 
+  /* RESPONSIVIDADE TOTAL */
   @media (max-width: 900px) {
-    .site-header { height: auto; padding: 15px 0; }
-    .header-flex { flex-direction: column; gap: 15px; }
-    .main-nav ul { gap: 10px; }
-    .main-nav a { font-size: 0.7em; }
+    .site-header { height: auto; padding: 20px 0; }
+    .header-content { flex-direction: column; gap: 20px; }
+    .main-nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .hero-card { padding: 60px 30px; }
+    .hero-card h1 { font-size: 2.8em; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
   }
 </style>
 
 <script is:inline>
+  // Script para a seta de subir
   window.onscroll = function() {
     const btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
       btn.classList.add("show");
     } else {
       btn.classList.remove("show");
