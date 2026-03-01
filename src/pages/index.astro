@@ -7,6 +7,7 @@ const posts = [
   {
     title: "WEEK 1: PROJECT VALIDATION",
     date: "23/02 - 27/02",
+image: "/sailingwearable/semana1.jpeg", // A tua foto gravada
     excerpt: "Meeting with Nuno Barreto at Clube Naval de Algés e Dafundo.",
     body: "In our first week, we presented the Knotix concept to Nuno Barreto at Clube Naval de Algés e Dafundo. His expert feedback was crucial to align our biometric tracking goals with the real needs of high-performance sailors."
   },
@@ -184,7 +185,7 @@ const posts = [
       <div class="blog-grid">
         {posts.map((p) => (
           <div class="card post-card" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
-            <div class="post-thumb"></div>
+            <div class="post-thumb" style={`background-image: url(${p.image}); background-size: cover; background-position: center; height: 200px; border-radius: 12px; margin-bottom: 20px;`}></div>
             <div class="post-meta">
               <span class="post-date">{p.date}</span>
               <h3 class="post-title">{p.title}</h3>
