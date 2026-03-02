@@ -518,13 +518,31 @@ image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
   #backToTop:hover { transform: translateY(-10px) scale(1.1); background: var(--accent-dark); }
 
   /* RESPONSIVIDADE TOTAL */
-  @media (max-width: 900px) {
-    .site-header { height: auto; padding: 20px 0; }
-    .header-content { flex-direction: column; gap: 20px; }
-    .main-nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
-    .hero-card { padding: 60px 30px; }
-    .hero-card h1 { font-size: 2.8em; }
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  /* NOVO SCALING PARA TELEMÓVEL */
+  @media (max-width: 800px) {
+    /* Ajuste de Navegação */
+    .header-content { flex-direction: column; gap: 20px; padding: 15px 0; }
+    .main-nav ul { gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+    /* Ajuste de Texto e Hero */
+    .hero-card { padding: 40px 20px; min-height: 400px; }
+    .hero-card h1 { font-size: 2.4em; letter-spacing: 2px; }
+    .hero-card .subtitle { font-size: 1.1em; }
+
+    /* Forçar 1 coluna em todas as grelhas (PDF source 103) */
+    .grid-2, .grid-3, .team-grid-new, .blog-grid { 
+      grid-template-columns: 1fr !important; 
+      gap: 20px;
+    }
+
+    /* Scaling de Cartões (Equipa e Parceiros) */
+    .person-card, .partner-detail-card { 
+      flex-direction: column !important; 
+      text-align: center; 
+      padding: 30px 20px; 
+    }
+    .person-links { justify-content: center; }
+    .partner-logo-side { width: 130px; margin-bottom: 10px; }
   }
 .partner-detail-card {
     display: flex;
