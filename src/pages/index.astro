@@ -520,10 +520,31 @@ image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
   /* RESPONSIVIDADE TOTAL */
   /* NOVO SCALING PARA TELEMÓVEL */
   @media (max-width: 800px) {
-    /* Ajuste de Navegação */
-    .header-content { flex-direction: column; gap: 20px; padding: 15px 0; }
-    .main-nav ul { gap: 12px; flex-wrap: wrap; justify-content: center; }
-
+    /* 1. Ajuste de Navegação e Logo (Escalamento) */
+    .site-header { 
+      height: auto !important; /* Remove a altura fixa para não cortar o conteúdo  */
+      padding: 20px 0; 
+    }
+    .header-content { 
+      flex-direction: column; 
+      gap: 15px; 
+      align-items: center; 
+    }
+    .site-logo { 
+      font-size: 1.4em !important; /* Reduz o tamanho para caber no ecrã  */
+      margin-bottom: 5px;
+      line-height: 1.2; 
+    }
+    .main-nav ul { 
+      display: flex;
+      flex-wrap: wrap; /* Permite que os links saltem de linha se necessário [cite: 100] */
+      justify-content: center; 
+      gap: 10px 18px; 
+      padding: 0;
+    }
+    .main-nav a {
+      font-size: 0.72em !important; /* Letra mais pequena para manter a navegação simples [cite: 100] */
+    }
     /* Ajuste de Texto e Hero */
     .hero-card { padding: 40px 20px; min-height: 400px; }
     .hero-card h1 { font-size: 2.4em; letter-spacing: 2px; }
