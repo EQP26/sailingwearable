@@ -2,20 +2,21 @@
 import SiteLayout from "../layouts/SiteLayout.astro";
 
 const projectTagline = "High-Performance Sailing Biometric Wearable";
-// BLOG POSTS - Estrutura de dados com as datas reais de trabalho
+// BLOG POSTS - Documentação técnica (Conforme PDF: não superficial)
 const posts = [
   {
     title: "WEEK 1: PROJECT VALIDATION",
     date: "23/02 - 27/02",
-image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
-    excerpt: "Meeting with Nuno Barreto at Clube Naval de Algés e Dafundo.",
-    body: "In our first week, we presented the Knotix concept to Nuno Barreto at Clube Naval de Algés e Dafundo. His expert feedback was crucial to align our biometric tracking goals with the real needs of high-performance sailors."
+    image: "/sailingwearable/semana1_v2.jpeg",
+    excerpt: "Technical validation with Nuno Barreto at Clube Naval de Algés.",
+    body: "In our first week, we met with Olympic medalist Nuno Barreto to validate the Knotix concept. We identified that real-time heart rate variability and motion telemetry are currently missing in high-performance training. This session was crucial to justify our selection of low-latency IMU sensors and define the requirements for a rugged, waterproof enclosure."
   },
   {
-    title: "WEEK 2: DIGITAL PRESENCE",
+    title: "WEEK 2: DIGITAL PRESENCE & ARCHITECTURE",
     date: "02/03 - 06/03",
-    excerpt: "Official launch of the Knotix website.",
-    body: "This week we are officially launching our project website. This platform will serve as our technical logbook, where we will share our progress in sensor integration, hardware development, and field tests on the water."
+    image: "/sailingwearable/semana2.jpg",
+    excerpt: "Launch of the technical logbook and site architecture.",
+    body: "This week marks the official launch of our project website. Following the engineering guidelines, this platform will serve as our technical logbook. We focused on establishing a clear navigation structure and integrating Google Analytics to monitor project outreach, ensuring a professional and structured record of our development process."
   }
 ];
 ---
