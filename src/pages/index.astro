@@ -260,12 +260,13 @@ image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
 
       <div class="card contact-form-card">
         <h3>SEND A MESSAGE</h3>
-        <form class="knotix-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="How can we help?" rows="4" required></textarea>
-          <button type="submit" class="btn primary">SEND MESSAGE</button>
-        </form>
+        <form class="knotix-form" action="https://formspree.io/f/xgoljjwq" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="How can we help?" rows="4" required></textarea>
+  
+  <button type="submit" class="btn primary">SEND MESSAGE</button>
+</form>
       </div>
     </div>
   </div>
@@ -462,6 +463,34 @@ image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
     backdrop-filter: blur(5px);
   }
   .btn:not(.primary):hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
+/* --- AJUSTE DO FORMULÁRIO (RIGOR E EQUILÍBRIO VISUAL) --- */
+  
+  .knotix-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento equilibrado */
+  }
+
+  .knotix-form input, 
+  .knotix-form textarea {
+    padding: 12px 16px; /* Tamanho "normal" e legível */
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    background: white;
+    color: var(--text-color);
+    font-family: inherit;
+    width: 100%;
+  }
+
+  /* Botão Proporcional: não "engole" o formulário */
+  .knotix-form .btn {
+    width: fit-content; 
+    padding: 10px 25px; 
+    font-size: 0.85em;
+    align-self: flex-start; /* Alinhado à esquerda para maior clareza */
+    margin-top: 5px;
+    cursor: pointer;
+  }
 
   /* CARDS COM BORDAS TÉCNICAS */
   .card { 
