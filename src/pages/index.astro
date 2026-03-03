@@ -33,7 +33,10 @@ image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
 
   <header class="site-header">
     <div class="container header-content">
-      <a href="#top" class="site-logo">Knotix</a>
+      <a href="#top" class="site-logo">
+  <img src="/sailingwearable/favicon.png" alt="Knotix Logo" class="header-logo-img" />
+  <span>Knotix</span>
+</a>
       <nav class="main-nav">
         <ul>
           <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
@@ -331,13 +334,32 @@ image: "/sailingwearable/semana1_v2.jpeg", // A tua foto gravada
     width: 100%; 
   }
   
+  /* Estilo do Logótipo no Cabeçalho */
   .site-logo { 
-    font-size: 1.8em; 
-    font-weight: 900; 
     text-decoration: none; 
     color: var(--accent); 
+    font-size: 1.8em; 
+    font-weight: 900; 
     text-transform: uppercase; 
-    letter-spacing: 3px; 
+    letter-spacing: 3px;
+    
+    /* Alinhamento Lado a Lado (Flexbox) */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o ícone e o nome */
+    transition: 0.3s ease;
+  }
+
+  .site-logo:hover {
+    opacity: 0.8;
+  }
+
+  /* Tamanho do Ícone */
+  .header-logo-img {
+    height: 38px; /* Altura ideal para o teu cabeçalho de 85px */
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px; /* Suaviza os cantos se o favicon for quadrado */
   }
   
   .main-nav ul { 
