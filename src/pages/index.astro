@@ -575,9 +575,58 @@ const posts = [
   .post-title { font-weight: 900; font-size: 1.4em; color: var(--accent-dark); margin: 10px 0; }
   .post-date { font-size: 0.9em; color: var(--accent); font-weight: 800; text-transform: uppercase; }
 
-  /* PARTNERS */
-  .partner-slot { height: 130px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: 900; letter-spacing: 4px; font-size: 1.2em; background: #fff; }
+  /* --- ESTILO DOS PARCEIROS (CORREÇÃO DE TEXTO E ALINHAMENTO) --- */
+  
+  .partner-detail-card {
+    display: flex;
+    align-items: center; 
+    gap: 30px;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    border-top: 6px solid var(--accent);
+    min-height: 200px;
+    
+    /* CORREÇÃO DAS LETRAS: Alinhamento à esquerda evita buracos no texto */
+    text-align: left; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  }
 
+  .partner-logo-side {
+    flex-shrink: 0;
+    width: 140px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-logo-side img {
+    max-width: 100%;
+    max-height: 85px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .partner-description-side {
+    flex: 1; /* Garante que o texto ocupa o espaço que sobra sem cortar */
+  }
+
+  .partner-description-side h3 {
+    margin: 0 0 8px 0;
+    color: var(--accent-dark);
+    font-size: 1.4em;
+    font-weight: 800;
+  }
+
+  .partner-description-side p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--muted);
+    font-size: 0.95em;
+    /* GARANTE QUE AS LETRAS NÃO SE AFASTAM */
+    letter-spacing: normal !important; 
+    word-spacing: normal !important;
+  }
   /* BACK TO TOP */
   #backToTop { 
     position: fixed; 
