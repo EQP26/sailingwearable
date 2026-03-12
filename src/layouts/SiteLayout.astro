@@ -1,0 +1,146 @@
+---
+const { title = "High-Performance Sailing Biometric Wearable" } = Astro.props;
+---
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    
+    <link rel="icon" type="image/png" href="/sailingwearable/favicon.png?v=2" />
+
+    <style>
+      :root{
+        --bg:#0b0f14;
+        --panel:#0f1621;
+        --text:#e9eef7;
+        --muted:#a9b4c6;
+        --line:rgba(255,255,255,.10);
+        --accent:#054a91; /* Ajustado para o Azul Knotix */
+        --accent2:#6affc3;
+        --shadow: 0 10px 30px rgba(0,0,0,.35);
+        --radius: 16px;
+        --max: 1100px;
+      }
+
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+
+      body{
+        margin:0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        background: radial-gradient(1200px 600px at 50% -10%, rgba(5,74,145,.15), transparent 55%),
+                    radial-gradient(900px 600px at 10% 30%, rgba(106,255,195,.05), transparent 60%),
+                    var(--bg);
+        color:var(--text);
+      }
+
+      a{color:inherit}
+      .container{max-width:var(--max); margin:0 auto; padding:0 20px;}
+
+      /* Sections */
+      section{
+        padding:38px 0;
+        scroll-margin-top: 80px; 
+      }
+
+      .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:12px}
+      h2{margin:0; font-size:22px; letter-spacing:.08em}
+      .hint{color:var(--muted); font-size:13px}
+
+      .grid-2{display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; margin-top:14px;}
+      .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:14px;}
+
+      .card{
+        border:1px solid var(--line);
+        background: rgba(255,255,255,.03);
+        border-radius: var(--radius);
+        padding:16px;
+      }
+      .card h3{margin:0 0 8px; font-size:14px; letter-spacing:.14em; color:var(--muted)}
+      .card p{margin:0; color:var(--text); line-height:1.6}
+
+      /* Modal */
+      dialog{
+        width:min(760px, 92vw);
+        border:none; border-radius: 18px;
+        padding:0;
+        background: rgba(15,22,33,.98);
+        color:var(--text);
+        box-shadow: 0 20px 70px rgba(0,0,0,.6);
+      }
+      dialog::backdrop{background: rgba(0,0,0,.65)}
+      .modal-head{
+        padding:18px 18px 12px;
+        border-bottom:1px solid var(--line);
+        display:flex; justify-content:space-between; gap:12px; align-items:center;
+      }
+      .modal-body{padding:18px; color:var(--muted); line-height:1.7}
+      .x{
+        border:1px solid var(--line);
+        background: rgba(255,255,255,.04);
+        color:var(--text);
+        border-radius: 12px;
+        padding:8px 12px;
+        cursor:pointer;
+        font-size:18px;
+        line-height:1;
+      }
+
+      footer{
+        padding:28px 0 40px;
+        border-top:1px solid var(--line);
+        color:var(--muted);
+      }
+
+      /* Responsive */
+      @media (max-width: 980px){
+        .grid-2{grid-template-columns:1fr}
+        .grid-3{grid-template-columns:1fr}
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="top">
+      <slot />
+    </main>
+
+    <dialog id="postModal" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div>
+          <div id="modalTitle" style="font-weight:900; letter-spacing:.12em;"></div>
+          <div id="modalDate" class="hint" style="margin-top:6px;"></div>
+        </div>
+        <button class="x" id="modalClose" aria-label="Fechar">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </dialog>
+
+    <script>
+      const modal = document.getElementById("postModal");
+      const t = document.getElementById("modalTitle");
+      const d = document.getElementById("modalDate");
+      const b = document.getElementById("modalBody");
+      const closeBtn = document.getElementById("modalClose");
+
+      closeBtn.addEventListener("click", () => modal.close());
+
+      // fechar com ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.open) modal.close();
+      });
+
+      document.addEventListener("click", (e) => {
+        const card = e.target.closest("[data-post]");
+        if (!card) return;
+
+        t.textContent = card.getAttribute("data-title") || "POST";
+        d.textContent = card.getAttribute("data-date") || "";
+        b.textContent = card.getAttribute("data-body") || "";
+        modal.showModal();
+      });
+    </script>
+  </body>
+</html>

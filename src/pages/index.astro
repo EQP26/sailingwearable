@@ -1,0 +1,740 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const projectTagline = "High-Performance Sailing Biometric Wearable";
+// BLOG POSTS - Atualizado com a Federação Portuguesa de Vela
+const posts = [
+  {
+    title: "WEEK 1: PROJECT VALIDATION",
+    date: "23/02 - 27/02",
+    image: "/sailingwearable/semana1_v2.jpeg",
+    excerpt: "Technical validation with Nuno Barreto at Federação Portuguesa de Vela.",
+    body: "In our first week, we presented the Knotix concept to Nuno Barreto at Federação Portuguesa de Vela (FPV). His expert feedback as a high-performance specialist was crucial to align our biometric tracking goals with the Olympic-level standards of competitive sailing."
+  },
+{
+    title: "WEEK 2: DIGITAL PRESENCE",
+    date: "02/03 - 06/03",
+    // Esta é a linha que tens de mudar:
+    image: "/sailingwearable/semana2.png", 
+    excerpt: "Official launch of the Knotix technical logbook.",
+    body: "This week we are officially launching our project website. This platform will serve as our technical logbook, ensuring a professional and structured record of our development process, sensor integration, and future field tests."
+  },
+{
+  title: "WEEK 3: TECHNICAL VALIDATION & PIVOT",
+  date: "09/03 - 13/03",
+  image: "/sailingwearable/semana3.png", // Substitui pelo nome da foto que escolheres
+  excerpt: "In-depth technical session with FPV's exercise physiologist João Moisés.",
+  body: "This week was pivotal for our technical roadmap. We met with João Moisés (FPV Exercise Physiologist) to discuss metabolic efficiency biomarkers. We explored the relevance of lactate and SmO2 (Moxy Monitor) in high-performance sailing. This led us to pivot our prototype towards a more integrated solution: synchronizing biometric data (Heart Rate, SmO2) with video analysis, specifically targeting muscle groups like the quadriceps and shoulders."
+}
+];
+
+
+---
+
+<SiteLayout title={`Knotix — ${projectTagline}`}>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVEM4DTQTH"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CVEM4DTQTH');
+</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#top" class="site-logo">
+  <img src="/sailingwearable/favicon.png" alt="Knotix Logo" class="header-logo-img" />
+  <span>Knotix</span>
+</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+          <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
+          <li><a href="#blog"><i class="fas fa-bold"></i> Blog</a></li>
+          <li><a href="#partners"><i class="fas fa-handshake"></i> Partners</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <div id="top" class="container hero">
+  <div class="hero-card">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+      <source src="/sailingwearable/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="kicker">AN ELECTROCAP PROJECT</div>
+      <h1>KNOTIX</h1>
+      <p class="subtitle">
+        A cutting-edge wearable system for sailing athletes designed to synchronize biometric effort with technical performance in real-time.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#about">LEARN MORE</a>
+        <a class="btn" href="#blog">VIEW UPDATES</a>
+       <a class="btn" href="/sailingwearable/documento.pdf" target="_blank">
+          <i class="fas fa-file-pdf"></i> PROJECT PROPOSAL
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>ABOUT OUR PROJECT</h2>
+        <div class="hint">Technical Roadmap</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-exclamation-circle"></i></div>
+          <h3>THE PROBLEM</h3>
+          <p>
+            Competitive sailing lacks integrated, real-time feedback systems. Athletes and coaches cannot currently correlate physical fatigue with specific technical maneuvers on the water.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>OUR SOLUTION</h3>
+          <p>
+            Knotix bridges this gap with a rugged, water-resistant wearable. By combining high-precision IMU data with biometric sensors, we provide a holistic view of performance under pressure.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top: 40px;">
+        <div class="card tech-feature">
+          <i class="fas fa-crosshairs"></i>
+          <h3>TARGET USERS</h3>
+          <p>Professional athletes and high-performance sailing academies.</p>
+        </div>
+        <div class="card tech-feature">
+          <i class="fas fa-water"></i>
+          <h3>ENVIRONMENT</h3>
+          <p>Built for the harsh conditions of small-boat (Dinghy) racing.</p>
+        </div>
+        <div class="card tech-feature">
+          <i class="fas fa-chart-line"></i>
+          <h3>SUCCESS</h3>
+          <p>Data-driven coaching and measurable gain in boat handling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <div class="section-title">
+        <h2>MEET THE TEAM</h2>
+      </div>
+
+      <div class="team-grid-new">
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('/sailingwearable/Diogo.jpeg');"></div>
+          <div class="person-info">
+            <h3>DIOGO CANDEIAS</h3>
+            <div class="course-id">LEE IST-ID 110584</div>
+            <div class="major">3rd Year Electronics Engineering</div>
+            <div class="person-links">
+              <a href="mailto:diogo.t.candeias@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('/sailingwearable/Miguel.jpeg');"></div>
+          <div class="person-info">
+            <h3>MIGUEL DUARTE</h3>
+            <div class="course-id">LEE IST-ID 110218</div>
+            <div class="major">3rd Year Electronics Engineering</div>
+            <div class="person-links">
+              <a href="mailto:miguel.cotrim.duarte@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+             <a href="https://www.linkedin.com/in/miguel-duarte-696918209/" target="_blank" class="btn-small linkedin-box"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('/sailingwearable/Hugo.jpeg');"></div>
+          <div class="person-info">
+            <h3>HUGO CHEN</h3>
+            <div class="course-id">LEEC IST-ID 109566</div>
+            <div class="major">3rd Year Electrical and Computer Engineering</div>
+            <div class="person-links">
+              <a href="mailto:hugo.chen@tecnico.ulisboa.pt" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card person-card">
+          <div class="person-img" style="background-image: url('/sailingwearable/Goncalo.jpeg');"></div>
+          <div class="person-info">
+            <h3>GONÇALO LOPES</h3>
+            <div class="course-id">LEE IST-ID 111160</div>
+            <div class="major">3rd Year Electronics Engineering</div>
+            <div class="person-links">
+              <a href="mailto:goncalo.l.lopes@tecnico.ulisboa.pt
+" class="btn-small"><i class="fas fa-envelope"></i> Email</a>
+              <a href="https://www.linkedin.com/in/gonçalo-maria-lourenço-lopes-88406b1ba" target="_blank" class="btn-small linkedin-box"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+  <div class="container">
+    <div class="section-title">
+      <h2>PROJECT VIDEO</h2>
+    </div>
+    <div class="card video-container">
+      <i class="fas fa-clock"></i> <p style="font-style: italic; letter-spacing: 1px;">To be announced</p>
+    </div>
+  </div>
+</section>
+
+  <section id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2>KNOTIX BLOG</h2>
+      </div>
+      <div class="blog-grid">
+        {posts.map((p) => (
+          <div class="card post-card" data-post data-title={p.title} data-date={p.date} data-body={p.body}>
+          <div class="post-thumb" style={`background-image: url(${p.image}); background-size: cover; background-position: center; width: 100%; height: 280px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #eee;`}></div>
+            <div class="post-meta">
+              <span class="post-date">{p.date}</span>
+              <h3 class="post-title">{p.title}</h3>
+            </div>
+            <p class="post-excerpt">{p.excerpt}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+<section id="partners">
+  <div class="container">
+    <div class="section-title">
+      <h2>PARTNERS</h2>
+      <div class="hint">Institutional Support</div>
+    </div>
+    
+    <div class="grid-2">
+      <div class="card partner-detail-card">
+        <div class="partner-logo-side">
+          <img src="/sailingwearable/ist-logo.png" alt="IST">
+        </div>
+        <div class="partner-description-side">
+          <h3>IST</h3>
+          <p>Portugal’s leading engineering school, providing the academic and research framework for Knotix.</p>
+        </div>
+      </div>
+
+      <div class="card partner-detail-card">
+        <div class="partner-logo-side">
+          <img src="/sailingwearable/FPV.png" alt="FPV">
+        </div>
+        <div class="partner-description-side">
+          <h3>FPV</h3>
+          <p>The national authority for sailing in Portugal, supporting our high-performance technical validation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>GET IN TOUCH</h2>
+      <div class="hint">Contact the Knotix Team</div>
+    </div>
+
+    <div class="grid-2 contact-wrapper">
+      <div class="card contact-info">
+        <h3>PROJECT INQUIRIES</h3>
+        <p>We're open to technical collaborations, research partnerships, or questions about our sailing telemetry system.</p>
+        
+        <div class="contact-links">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>knotix.sailing@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Lisbon, Portugal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card contact-form-card">
+        <h3>SEND A MESSAGE</h3>
+        <form class="knotix-form" action="https://formspree.io/f/xgoljjwq" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="How can we help?" rows="4" required></textarea>
+  
+  <button type="submit" class="btn primary">SEND MESSAGE</button>
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <footer class="knotix-footer" id="contact">
+    <div class="container footer-grid">
+      <span class="footer-logo">KNOTIX</span>
+      <div class="footer-copy">
+        <p>&copy; 2026 ElectroCap.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" id="backToTop" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+<style is:global>
+  /* CONFIGURAÇÃO COMPLETA DE ESTILOS (O PESO QUE PEDISTE) */
+  :root {
+    --bg-color: #f8fafb;
+    --text-color: #1e272e;
+    --accent: #054a91;
+    --accent-dark: #0a3d62;
+    --muted: #718093;
+    --card-bg: #ffffff;
+    --header-h: 85px;
+    --container-max: 1140px;
+  }
+
+  * { box-sizing: border-box; }
+  body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    margin: 0; 
+    line-height: 1.8; 
+  }
+  html { scroll-behavior: smooth; }
+  
+  .container { 
+    max-width: var(--container-max); 
+    margin: 0 auto; 
+    padding: 0 25px; 
+  }
+  
+  section { padding: 100px 0 80px; border-bottom: 1px solid #dcdde1; }
+
+  /* HEADER ALINHADO E COMPLETO */
+  .site-header { 
+    background: #ffffff; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+    height: var(--header-h); 
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .header-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+  }
+  
+  /* Estilo do Logótipo no Cabeçalho */
+  .site-logo { 
+    text-decoration: none; 
+    color: var(--accent); 
+    font-size: 1.8em; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    letter-spacing: 3px;
+    
+    /* Alinhamento Lado a Lado (Flexbox) */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o ícone e o nome */
+    transition: 0.3s ease;
+  }
+
+  .site-logo:hover {
+    opacity: 0.8;
+  }
+
+  /* Tamanho do Ícone */
+  .header-logo-img {
+    height: 38px; /* Altura ideal para o teu cabeçalho de 85px */
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px; /* Suaviza os cantos se o favicon for quadrado */
+  }
+  
+  .main-nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .main-nav a { 
+    text-decoration: none; 
+    color: var(--accent); 
+    font-weight: 700; 
+    font-size: 0.85em; 
+    text-transform: uppercase; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  .main-nav a:hover { color: var(--accent-dark); transform: translateY(-1px); }
+
+  /* HERO - IMPACTO TOTAL */
+  .hero { padding-top: 50px; padding-bottom: 50px; }
+  .hero-card { 
+  position: relative; 
+    overflow: hidden; 
+    padding: 110px 60px; 
+    border-radius: 24px; 
+    text-align: center; 
+    box-shadow: 0 25px 50px -12px rgba(5, 74, 145, 0.4); 
+    margin-top: 40px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.hero-video-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Ajusta aqui para ficar mais ou menos escuro */
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+  }
+  .hero-card h1 { 
+    font-size: clamp(3em, 8vw, 5em); 
+    margin: 15px 0; 
+    color: white; 
+    letter-spacing: 6px; 
+    font-weight: 900; 
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .hero-card .subtitle { 
+    color: white;
+    font-size: 1.4em; 
+    opacity: 0.9; 
+    margin-bottom: 50px; 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-weight: 300;
+  }
+  .kicker { font-weight: 800; letter-spacing: 5px; color: #81a4cd; font-size: 1em; text-transform: uppercase; }
+
+  /* BOTÕES STARTUP */
+  .cta-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .btn { 
+    padding: 18px 36px; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    font-weight: 800; 
+    transition: 0.4s; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 12px; 
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+  .btn.primary { background: white; color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+  .btn.primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+  .btn:not(.primary) { 
+    background: rgba(255,255,255,0.1); 
+    color: white; 
+    border: 1.5px solid rgba(255,255,255,0.4); 
+    backdrop-filter: blur(5px);
+  }
+  .btn:not(.primary):hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
+/* --- AJUSTE DO FORMULÁRIO (RIGOR E EQUILÍBRIO VISUAL) --- */
+  
+  .knotix-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento equilibrado */
+  }
+
+  .knotix-form input, 
+  .knotix-form textarea {
+    padding: 12px 16px; /* Tamanho "normal" e legível */
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    background: white;
+    color: var(--text-color);
+    font-family: inherit;
+    width: 100%;
+  }
+
+  /* Botão Proporcional: não "engole" o formulário */
+  .knotix-form .btn {
+    width: fit-content; 
+    padding: 10px 25px; 
+    font-size: 0.85em;
+    align-self: flex-start; /* Alinhado à esquerda para maior clareza */
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  /* CARDS COM BORDAS TÉCNICAS */
+  .card { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 18px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04); 
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border-top: 6px solid var(--accent); 
+    position: relative;
+  }
+  .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+  .card h3 { margin: 0 0 20px; color: var(--accent-dark); font-size: 1.3em; font-weight: 800; }
+  .card-icon { font-size: 2.2em; color: var(--accent); margin-bottom: 20px; }
+
+  /* GRELHAS */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+
+  /* SECTION TITLES */
+  .section-title { text-align: center; margin-bottom: 70px; }
+  .section-title h2 { font-size: 2.8em; margin-bottom: 15px; color: var(--accent-dark); font-weight: 900; letter-spacing: -1px; }
+  .hint { text-transform: uppercase; letter-spacing: 4px; color: var(--accent); font-size: 0.9em; font-weight: 800; }
+
+  /* TEAM DESIGN CIRCULAR PREMIUM */
+  .team-grid-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 35px; }
+  .person-card { display: flex; align-items: center; gap: 30px; padding: 35px; }
+  .person-img { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    background-size: cover; 
+    background-position: center; 
+    flex-shrink: 0; 
+    border: 5px solid #f1f2f6; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+  }
+  .person-info h3 { margin: 0 0 5px; font-size: 1.4em; font-weight: 900; color: var(--accent-dark); }
+  .course-id { font-weight: 900; font-size: 0.95em; color: var(--accent); margin-bottom: 5px; }
+  .major { font-size: 0.85em; color: var(--muted); margin-bottom: 20px; font-weight: 600; }
+  .person-links { display: flex; gap: 12px; }
+  .btn-small { 
+    text-decoration: none; 
+    font-size: 0.8em; 
+    padding: 8px 20px; 
+    border: 2px solid #d1d8e0; 
+    border-radius: 8px; 
+    color: var(--text-color); 
+    font-weight: 800; 
+    transition: 0.3s; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+  }
+  .btn-small:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  .linkedin-box { color: #0077b5; border-color: #0077b5; }
+  .linkedin-box:hover { background: #0077b5; color: white; }
+
+  /* FOOTER DARK 2026 PREMIUM */
+  .knotix-footer { 
+    background: #0a0e14; 
+    color: #fff; 
+    padding: 80px 0; 
+    border-top: 8px solid var(--accent); 
+  }
+  .footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
+  .f-logo { font-size: 2em; font-weight: 900; letter-spacing: 4px; color: var(--accent); }
+  .footer-brand p { color: #576574; font-weight: 700; margin: 5px 0 0; font-size: 1em; }
+  .footer-copy p { font-weight: 800; color: #8395a7; font-size: 1.2em; margin: 0; }
+
+  /* BLOG / VIDEO PLACEHOLDERS */
+  .video-container { text-align: center; padding: 80px; color: var(--muted); border: 3px dashed #dcdde1; background: #f1f2f6; }
+  .video-container i { font-size: 4.5em; color: var(--accent); opacity: 0.5; margin-bottom: 25px; display: block; }
+  .post-thumb { background: #dfe6e9; height: 180px; border-radius: 12px; margin-bottom: 25px; }
+  .post-title { font-weight: 900; font-size: 1.4em; color: var(--accent-dark); margin: 10px 0; }
+  .post-date { font-size: 0.9em; color: var(--accent); font-weight: 800; text-transform: uppercase; }
+
+  /* --- ESTILO DOS PARCEIROS (CORREÇÃO DE TEXTO E ALINHAMENTO) --- */
+  
+  .partner-detail-card {
+    display: flex;
+    align-items: center; 
+    gap: 30px;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    border-top: 6px solid var(--accent);
+    min-height: 200px;
+    
+    /* CORREÇÃO DAS LETRAS: Alinhamento à esquerda evita buracos no texto */
+    text-align: left; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  }
+
+  .partner-logo-side {
+    flex-shrink: 0;
+    width: 140px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-logo-side img {
+    max-width: 100%;
+    max-height: 85px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .partner-description-side {
+    flex: 1; /* Garante que o texto ocupa o espaço que sobra sem cortar */
+  }
+
+  .partner-description-side h3 {
+    margin: 0 0 8px 0;
+    color: var(--accent-dark);
+    font-size: 1.4em;
+    font-weight: 800;
+  }
+
+  .partner-description-side p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--muted);
+    font-size: 0.95em;
+    /* GARANTE QUE AS LETRAS NÃO SE AFASTAM */
+    letter-spacing: normal !important; 
+    word-spacing: normal !important;
+  }
+  /* BACK TO TOP */
+  #backToTop { 
+    position: fixed; 
+    bottom: 50px; 
+    right: 50px; 
+    background: var(--accent); 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    box-shadow: 0 15px 30px rgba(5, 74, 145, 0.4); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    z-index: 1000; 
+    font-size: 1.3em;
+  }
+  #backToTop.show { opacity: 1; visibility: visible; }
+  #backToTop:hover { transform: translateY(-10px) scale(1.1); background: var(--accent-dark); }
+
+  /* RESPONSIVIDADE TOTAL */
+  /* NOVO SCALING PARA TELEMÓVEL */
+  @media (max-width: 800px) {
+    /* 1. Ajuste de Navegação e Logo (Escalamento) */
+    .site-header { 
+      height: auto !important; /* Remove a altura fixa para não cortar o conteúdo  */
+      padding: 20px 0; 
+    }
+    .header-content { 
+      flex-direction: column; 
+      gap: 15px; 
+      align-items: center; 
+    }
+    .site-logo { 
+      font-size: 1.4em !important; /* Reduz o tamanho para caber no ecrã  */
+      margin-bottom: 5px;
+      line-height: 1.2; 
+    }
+    .main-nav ul { 
+      display: flex;
+      flex-wrap: wrap; /* Permite que os links saltem de linha se necessário [cite: 100] */
+      justify-content: center; 
+      gap: 10px 18px; 
+      padding: 0;
+    }
+    .main-nav a {
+      font-size: 0.72em !important; /* Letra mais pequena para manter a navegação simples [cite: 100] */
+    }
+    /* Ajuste de Texto e Hero */
+    .hero-card { padding: 40px 20px; min-height: 400px; }
+    .hero-card h1 { font-size: 2.4em; letter-spacing: 2px; }
+    .hero-card .subtitle { font-size: 1.1em; }
+
+    /* Forçar 1 coluna em todas as grelhas (PDF source 103) */
+    .grid-2, .grid-3, .team-grid-new, .blog-grid { 
+      grid-template-columns: 1fr !important; 
+      gap: 20px;
+    }
+
+    /* Scaling de Cartões (Equipa e Parceiros) */
+    .person-card, .partner-detail-card { 
+      flex-direction: column !important; 
+      text-align: center; 
+      padding: 30px 20px; 
+    }
+    .person-links { justify-content: center; }
+    .partner-logo-side { width: 130px; margin-bottom: 10px; }
+  }
+.partner-detail-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    border-top: 8px solid var(--accent);
+    background: white;
+    border-radius: 18px;
+  }
+  .partner-logo-side { flex-shrink: 0; width: 180px; }
+  .partner-logo-side img { width: 100%; height: auto; filter: grayscale(100%); transition: 0.4s; }
+  .partner-detail-card:hover .partner-logo-side img { filter: grayscale(0%); }
+  .partner-description-side h3 { margin: 0 0 15px; color: var(--accent-dark); }
+  .partner-description-side p { margin: 0; color: var(--muted); text-align: justify; }
+</style>
+
+<script is:inline>
+  // Script para a seta de subir
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  };
+</script>
+</SiteLayout>
