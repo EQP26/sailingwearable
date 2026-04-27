@@ -607,9 +607,17 @@ const posts = [
   /* BLOG / VIDEO PLACEHOLDERS */
   .video-container { text-align: center; padding: 80px; color: var(--muted); border: 3px dashed #dcdde1; background: #f1f2f6; }
   .video-container i { font-size: 4.5em; color: var(--accent); opacity: 0.5; margin-bottom: 25px; display: block; }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 35px; align-items: stretch; }
+  .post-card { height: 100%; display: flex; flex-direction: column; }
   .post-thumb { background: #dfe6e9; height: 180px; border-radius: 12px; margin-bottom: 25px; }
   .post-title { font-weight: 900; font-size: 1.4em; color: var(--accent-dark); margin: 10px 0; }
   .post-date { font-size: 0.9em; color: var(--accent); font-weight: 800; text-transform: uppercase; }
+
+  @media (max-width: 1200px) {
+    .blog-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
 
   /* --- ESTILO DOS PARCEIROS (CORREÇÃO DE TEXTO E ALINHAMENTO) --- */
   
